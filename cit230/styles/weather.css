@@ -24,3 +24,34 @@ p {
     font-family: "Georgia";
     font-size: 16px;
 }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    /*
+    text-align: center;
+    display: inline;
+    /*
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+    float: left;
+    width: 100%;
+    */
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px;
+    /*
+    display: inline;
+    float: left;
+    clear: both;
+    */
+}
+/*
+.nav-list {
+     display: inline;
+}
+*/

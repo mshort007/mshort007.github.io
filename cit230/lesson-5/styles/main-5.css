@@ -2,14 +2,34 @@ body {
     background-color: #dff;
 }
 
-h1 {
+header h1 {
     font-size: 3rem;
     font-family: "Brush Script MT", "Vladimir Script", cursive, sans-serif;
     color: gainsboro;
     background-color: dimgray;
     margin: 0;
     padding: 0px 0px 0px 25px;
-    width: 300px;  
+    text-align: center;
+    min-width: 300px;
+    background-position: right;
+}
+
+.subheading {
+    text-align: center;
+}
+
+header img {
+    float: left;
+    background-position: left;
+    max-width: 300px;
+}
+
+main img {
+    display: block;
+}
+
+article img {
+    display: block;
 }
 
 nav ul {
@@ -22,7 +42,7 @@ nav ul {
 nav ul li a {
     display: block;
     color: #000;
-    padding: 8px 16px;
+    padding: 20px 16px;
     text-decoration: none;
     border: 1px solid white;
 }
@@ -48,5 +68,9 @@ nav ul li {
 }
 
 .forecast {
-    visibility: hidden;
+    display: none;
+}
+
+.motto {
+    
 }

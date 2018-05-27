@@ -2,8 +2,8 @@
 
     body {
         min-width: 666px;
-
     }
+
     header h1 {
         font-size: 4.0rem;
         padding: 20px;
@@ -13,19 +13,11 @@
         float: left;
         margin: 0;
         max-width: 250px;
-        /* background-position: left; */
     }
 
     .subheading {
         font-size: 1.25rem;
     }
-/*
-    main img {
-        float: left;
-        max-width: 55%;
-        height:inherit
-    }
-*/
 
     nav button {
         display: none;
@@ -145,6 +137,7 @@
         width: 50%;
         margin: 0;
     }
+
     .contact-right {
         display: inline-block;
         width: 40%;

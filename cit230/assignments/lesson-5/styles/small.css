@@ -54,14 +54,19 @@ nav ul li a {
     border: 1px solid white;
 }
 
-nav ul li a:hover {
-    background-color: lightgrey;
-    color: white;
-}
-
 nav ul li a:link {
     background-color: #555;
     color: white;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color:  white;
+}
+
+nav ul li a:active {
+    background-color: white;
+    color: #555;
 }
 
 nav ul li {
@@ -106,8 +111,8 @@ article img {
 }
 
 .active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: #555;
 }
 
 .forecast {

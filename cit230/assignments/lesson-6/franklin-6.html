@@ -16,7 +16,10 @@
 
 <body>
   <header class="clearfix">
-      <img src="images/WeatherVaneLogo.png" alt="The site logo">
+      <img src="images/WeatherVaneLogo-md.png" alt="The Weather Vane Logo"
+           srcset="images/WeatherVaneLogo-sm.png 600w,
+                   images/WeatherVaneLogo-md.png 1024w,
+                   images/WeatherVaneLogo-lg.png 1920w">
       <h1>The&nbsp;Weather&nbsp;Vane</h1>
       <div class="subheading">Keeping You Informed, Rain or Shine.</div>
   </header>
@@ -52,7 +55,14 @@
 
     <section class="current">
         <h2>Current Condition</h2>
-        <img src="images/sunny.png" alt="Sunny Weather">
+        <!-- srcset is correct only using 2 variations of the image. This is because -->
+        <!-- the small screen image is displayed large, so it can actually use the   -->
+        <!-- same image that is selected when the page uses a large width, the       -->
+        <!-- calculated pixel widths for the images were almost identicle.           -->
+        <img src="images/sunny-200px.png" alt="Sunny Weather"
+             srcset="images/sunny-200px.png 600w,
+                     images/sunny-100px.png 1024w,
+                     images/sunny-200px.png 1920w">
     </section>
 
 
@@ -93,7 +103,10 @@
 
     <article>
       <h2>Recent News</h2>
-      <img src="images/franklin_countryside.jpg" alt="Franklin Countryside">
+        <img src="images/countryside-small.jpg" alt="Franklin Countryside"
+             srcset="images/countryside-small.jpg 600w,
+                     images/countryside-medium.jpg 1024w,
+                     images/countryside-large.jpg 1920w">
       <p class="town-article">
        Franklin has broken the record for the warmest temperatures seen in years in the entire county. Our usual cold climate topping out at 79&deg;&nbsp;F for the yearly high, ongoing for many decades, has finally given us a pleasant surprise with temperatures that make it wonderfully pleasant to be outdoors. Local clothing shops that have rarely had success selling shorts cannot keep them in stock. People are going outdoors and enjoying fun in the sun. Local parks have been found to be at their full capacity every day. There is no better time to live in Franklin than right now. The local school districts have even brought up the idea of closing all schools in the disctrict and allowing a few days off in order to enjoy this miraculous weather. The last time a 90&deg;&nbsp;F temperature was registered in Franklin was July 17, 1937. If you have not had the chance to venture outside to enjoy the weather lately, please make sure to do so before it is gone. Who knows when weather this good will come again.
       </p>

@@ -1,0 +1,142 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Merriweather', serif;
+    min-width: 390px;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: "Brush Script MT", "Vladimir Script", cursive, sans-serif;
+    color: #555;
+    margin: 0;
+    padding: 0 0 0 25px;
+    min-width: 150px;
+}
+
+.subheading {
+    margin: 0;
+    font-size: .9rem;
+}
+
+header img {
+    float: left;
+    max-width: 20%;
+    margin: 0;
+}
+
+header {
+    margin: 10px 0;
+}
+
+nav button {
+    margin: 10px 0 10px 10px;
+    font-size: 2.5rem;
+}
+
+nav {
+    width: 100%;
+    background-color: #555;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 20px 16px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+nav ul li a:link {
+    background-color: #555;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color:  white;
+}
+
+nav ul li a:active {
+    background-color: white;
+    color: #555;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+nav img {
+    width: 100%;
+}
+
+main h1,h2,h3 {
+    text-align: left;
+    margin: 2%;
+}
+
+.current img {
+    width: 35%;
+    padding: 0 2% 0 2%;
+}
+
+article {
+    display: block;
+    margin: 1% 1% 1% 1%;
+}
+
+article p {
+    text-align: justify;
+    text-rendering: optimizeLegibility;
+    line-height: 1.50em;
+    margin: 8px 0 8px 0;
+    vertical-align: text-top;
+}
+
+article img {
+    display: block;
+    max-width: 100%;
+    padding: 0;
+}
+
+.active {
+    background-color: white;
+    color: #555;
+}
+
+.forecast {
+    display: none;
+}
+
+.contact {
+    border-top: 2px solid dimgrey;
+    margin: 0;
+    padding: 15px 0 10px 2%;
+    background-color: lightgrey
+}
+
+footer .footer-bar {
+    text-align: center;
+    color: white;
+    background-color: dimgrey;
+    margin: 0;
+    padding: 2% 0 2% 0;
+}
+
+/* clearfix */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

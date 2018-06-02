@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City of Franklin | Weather | The Weather Vane</title>
+  <meta name="author" content="Michael Short">
+  <meta name="description" content="Weather for the City of Franklin, Highs and Lows, Current Conditions, 10 Day Forecast, News">
+  <!-- external style references in the proper cascading order -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">  <!-- Google API font reference -->
+  <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+  <link href="styles/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
+  <link href="styles/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
+  <link href="styles/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+</head>
+
+<body>
+  <header class="clearfix">
+      <img src="images/WeatherVaneLogo.png" alt="The site logo">
+      <h1>The&nbsp;Weather&nbsp;Vane</h1>
+      <div class="subheading">Keeping You Informed, Rain or Shine.</div>
+  </header>
+
+  <!-- site navigation using placeholder references for other pages -->
+  <nav>
+    <button onclick="toggleNavMenu()">&#9776;</button>
+    <ul id="navMenu" class="hide">
+        <li><a href="#">Home</a></li>
+        <li><a class ="active" href="#">Franklin</a></li>
+        <li><a href="#">Greenville</a></li>
+        <li><a href="#">Springfield</a></li>
+        <li><a href="#">Storm Center</a></li>
+        <li><a href="#">Gallery</a></li>
+    </ul>
+        <img src="images/franklin_md.jpg" alt="A Sunny Day In Franklin Valley"
+             srcset="images/franklin-sm.jpg 600w,
+                     images/franklin-md.jpg 1024w,
+                     images/franklin-lg.jpg 1920w">
+  </nav>
+
+  <main>
+    <h1>The City of Franklin</h1>
+    <section class="weather-summary">
+      <h2>Today's Weather</h2>
+        <ul>
+            <li>High:&nbsp;<b>90&deg;F</b></li>
+            <li>Low:&nbsp;<b>66&deg;F</b></li>
+            <li>Chance of Precipitation:&nbsp;<b>0&#37;</b></li>
+            <li>Wind:&nbsp;<b>5&nbsp;mph&nbsp;from&nbsp;the&nbsp;South&nbsp;West</b></li>
+        </ul>
+    </section>
+
+    <section class="current">
+        <h2>Current Condition</h2>
+        <img src="images/sunny.png" alt="Sunny Weather">
+    </section>
+
+
+    <section class="forecast">
+        <h2>Forecast Details</h2>
+        <h3>Ten Day Forecast</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                    <th>Day 5</th>
+                    <th>Day 6</th>
+                    <th>Day 7</th>
+                    <th>Day 8</th>
+                    <th>Day 9</th>
+                    <th>Day 10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>89&deg;F</td>
+                    <td>87&deg;F</td>
+                    <td>78&deg;F</td>
+                    <td>75&deg;F</td>
+                    <td>72&deg;F</td>
+                    <td>72&deg;F</td>
+                    <td>79&deg;F</td>
+                    <td>83&deg;F</td>
+                    <td>85&deg;F</td>
+                    <td>89&deg;F</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <article>
+      <h2>Recent News</h2>
+      <img src="images/franklin_countryside.jpg" alt="Franklin Countryside">
+      <p class="town-article">
+       Franklin has broken the record for the warmest temperatures seen in years in the entire county. Our usual cold climate topping out at 79&deg;&nbsp;F for the yearly high, ongoing for many decades, has finally given us a pleasant surprise with temperatures that make it wonderfully pleasant to be outdoors. Local clothing shops that have rarely had success selling shorts cannot keep them in stock. People are going outdoors and enjoying fun in the sun. Local parks have been found to be at their full capacity every day. There is no better time to live in Franklin than right now. The local school districts have even brought up the idea of closing all schools in the disctrict and allowing a few days off in order to enjoy this miraculous weather. The last time a 90&deg;&nbsp;F temperature was registered in Franklin was July 17, 1937. If you have not had the chance to venture outside to enjoy the weather lately, please make sure to do so before it is gone. Who knows when weather this good will come again.
+      </p>
+    </article>
+
+  </main>
+
+  <footer>
+    <section class="contact">
+    <div class="contact-left">
+      <b>Address:</b><br>
+      The Weather Vane<br>
+      123 Main St.<br>
+      Franklin, MI 87654<br><br>
+    </div>
+    <div class="contact-right">
+      <b>Phone:</b><br>
+      (801) 555-1234<br>
+      <br>
+      <b>Email:</b><br>
+      info@theweathervane.com
+    </div>
+    </section>
+    <section class="footer-bar">
+        &copy;2018 | All&nbsp;Rights&nbsp;Reserved | The&nbsp;Weather&nbsp;Vane | <span id="currentdate"></span>
+    </section>
+  </footer>
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+  <script>
+    function replaceDate() {
+        document.getElementById("currentdate").textContent = getTodaysDate(new Date());
+    }
+    replaceDate();
+  </script>
+
+</body>
+</html>

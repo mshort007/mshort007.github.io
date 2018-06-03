@@ -1,27 +1,27 @@
 body {
     background-color: aliceblue;
     font-family: 'Merriweather', serif;
-    min-width: 390px;
+    /* min-width: 390px; */
     margin: 0;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: "Brush Script MT", "Vladimir Script", cursive, sans-serif;
     color: #555;
     margin: 0;
     padding: 0 0 0 25px;
-    min-width: 150px;
+    /* min-width: 150px; */
 }
 
 .subheading {
     margin: 0;
-    font-size: .9rem;
+    font-size: .7rem;
 }
 
 header img {
     float: left;
-    max-width: 20%;
+    /* max-width: 20%; */
     margin: 0;
 }
 
@@ -32,6 +32,8 @@ header {
 nav button {
     margin: 10px 0 10px 10px;
     font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
 }
 
 nav {
@@ -106,7 +108,7 @@ article p {
 
 article img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     padding: 0;
 }
 

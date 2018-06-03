@@ -1,7 +1,7 @@
 @media only screen and (min-width: 37.5em) {
 
     body {
-        min-width: 666px;
+        /* min-width: 666px; */
     }
 
     header h1 {
@@ -12,7 +12,7 @@
     header img {
         float: left;
         margin: 0;
-        max-width: 250px;
+        /* max-width: 250px; */
     }
 
     .subheading {
@@ -50,7 +50,7 @@
     }
 
     nav ul li a {
-        padding: .5rem 1rem;
+        padding: 1rem 1rem;
     }
 
     nav ul.hide {

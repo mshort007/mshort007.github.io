@@ -1,18 +1,12 @@
 @media only screen and (min-width: 37.5em) {
 
-    body {
-        /* min-width: 666px; */
-    }
-
     header h1 {
         font-size: 4.0rem;
-        padding: 20px;
     }
 
     header img {
         float: left;
-        margin: 0;
-        /* max-width: 250px; */
+        min-height: 120px;
     }
 
     .subheading {
@@ -50,7 +44,7 @@
     }
 
     nav ul li a {
-        padding: 1rem 1rem;
+        padding: 1rem .63rem;
     }
 
     nav ul.hide {

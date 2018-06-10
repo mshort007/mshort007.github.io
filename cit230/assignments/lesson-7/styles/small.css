@@ -4,6 +4,18 @@ body {
     margin: 0;
 }
 
+header {
+    display: flex;
+    direction: row;
+}
+
+header img {
+    margin: 1% 1%;
+    flex: 0 1 auto;
+
+    /*min-height: 60px;*/
+}
+
 header h1 {
     font-size: 2rem;
     font-family: "Brush Script MT", "Vladimir Script", cursive, sans-serif;
@@ -12,20 +24,17 @@ header h1 {
     padding: 0;
 }
 
-.subheading {
+header h2 {
     margin: 0;
     font-size: .7rem;
 }
 
-header img {
-    float: left;
-    margin: 0 1%;
-    min-height: 60px;
-}
-
-header {
-    margin: 1% 0;
-    vertical-align: top;
+.headers {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 nav button {
@@ -41,7 +50,6 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -131,8 +139,31 @@ footer .footer-bar {
     text-align: center;
     color: white;
     background-color: dimgrey;
-    margin: 0;
+    margin: 20px 0 0 0 ;
     padding: 2% 0 2% 0;
+}
+
+.image-gallery {
+   display: grid;
+   grid-template-columns: 1fr;
+   border: 2px dashed red;
+   justify-content: center;
+
+  /* grid-gap: 20px; */
+}
+
+.image-gallery figure {
+    margin: 0;
+    border: 3px dashed blue;
+}
+
+.image-gallery figcaption {
+    text-align: center;
+}
+
+.image-gallery img {
+    border-radius: 2%;
+    width: 100%;
 }
 
 /* clearfix */

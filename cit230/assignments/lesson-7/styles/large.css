@@ -4,12 +4,25 @@
         font-size: 6rem;
     }
 
-    .subheading {
+    header h2 {
         font-size: 1.75rem;
     }
 
     nav ul li a {
+        line-height: 50px;
         padding: .5rem 1rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .image-gallery figure:hover > img {
+        box-shadow: 10px 10px 10px dimgrey;
+    }
+
+    .image-gallery figure:hover > figcaption {
+        text-shadow: 5px 5px 2px dimgrey;
     }
 
     article {

@@ -1,15 +1,15 @@
 @media only screen and (min-width: 37.5em) {
 
+  /*  header img {
+        flex: 0 1 204px;
+        min-height: 120px;
+    }*/
+
     header h1 {
         font-size: 4.0rem;
     }
 
-    header img {
-        float: left;
-        min-height: 120px;
-    }
-
-    .subheading {
+    header h2 {
         font-size: 1.25rem;
     }
 
@@ -120,9 +120,14 @@
         margin: 0 1% 2% 2%;
     }
 
+    .image-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
     footer {
         width: 100%;
-        margin: 0;
+        /*margin: 0;*/
         clear: both;
     }
 

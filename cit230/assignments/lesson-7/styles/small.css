@@ -12,8 +12,7 @@ header {
 header img {
     margin: 1% 1%;
     flex: 0 1 auto;
-
-    /*min-height: 60px;*/
+    min-height: 60px;
 }
 
 header h1 {

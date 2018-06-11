@@ -6,7 +6,7 @@ body {
 
 header {
     display: flex;
-    direction: row;
+    flex-direction: row;
 }
 
 header img {
@@ -146,7 +146,7 @@ footer .footer-bar {
 .image-gallery {
    display: grid;
    grid-template-columns: 1fr;
-   border: 2px dashed red;
+  /* border: 2px dashed red; */
    justify-content: center;
 
   /* grid-gap: 20px; */
@@ -154,7 +154,7 @@ footer .footer-bar {
 
 .image-gallery figure {
     margin: 0;
-    border: 3px dashed blue;
+    /* border: 3px dashed blue; */
 }
 
 .image-gallery figcaption {

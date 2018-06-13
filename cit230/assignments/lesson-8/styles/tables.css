@@ -1,0 +1,53 @@
+body {
+    background-color: white;
+    font-family: 'Ubuntu',sans-serif;
+    color: black;
+}
+
+table {
+    font-size: 11pt;
+}
+
+table td,th {
+    padding: .5em;
+}
+
+table,th,td {
+    border: solid #bbbbbb 1px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead, tfoot {
+    background: #7fb9c2;
+}
+
+thead td {
+    font-size: 18pt;
+    padding: .30em;
+    font-weight: bold;
+}
+
+tbody tr {
+    background: #e7ffed;
+}
+
+tbody tr:nth-child(2n+1) {
+    background: #e7f0ed;
+}
+
+.goalreached, thead th {
+    background: #628ca6;
+    color: white;
+}
+
+thead th {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+tfoot {
+    font-size: 8pt;
+}
+
+

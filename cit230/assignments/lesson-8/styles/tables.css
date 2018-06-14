@@ -8,6 +8,7 @@ body {
 
 table {
     font-size: 11pt;
+    box-shadow: 10px 10px 15px #6c93ab;
 }
 
 table td,th {

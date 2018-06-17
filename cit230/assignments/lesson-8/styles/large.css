@@ -40,4 +40,11 @@
         margin: 0;
     }
 
+    form label.sxs {
+        padding: .4rem 0;
+    }
+
+    form label.above input, form label.above select {
+        padding: .25rem;
+    }
 }

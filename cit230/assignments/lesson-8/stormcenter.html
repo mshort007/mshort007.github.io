@@ -31,7 +31,7 @@
             <button onclick="toggleNavMenu()">&#9776;</button>
             <ul id="navMenu" class="hide">
                 <li><a href="#">Home</a></li>
-                <li><a href="franklin-7.html">Franklin</a></li>
+                <li><a href="franklin-8.html">Franklin</a></li>
                 <li><a href="#">Greenville</a></li>
                 <li><a href="#">Springfield</a></li>
                 <li><a class="active" href="stormcenter.html">Storm Center</a></li>
@@ -42,21 +42,25 @@
         <main>
             <h1>Storm Center</h1>
 
+            <section class="stormCenterIntro">
+                <p>Welcome to our Storm Center! Here we give our visitors the opportunity to report on storms from their local region. Please feel free to contribute. Your contributions help us all to stay up to date with the weather conditions that affect our daily lives.</p>
+            </section>
+
             <form method="get" action="thankyou.html">
                 <!-- fieldset 1 Contact Info -->
                 <fieldset>
                     <legend>Storm Reporter</legend>
-                    <label>Full Name *<input type="text" name="name" placeholder="John Doe" pattern="[A-Za-z\s]{5,}" required></label>
-                    <label>Email *<input type="text" name="email" placeholder="email@domain.com"></label>
-                    <label>Phone *<input type="tel" name="phone" placeholder="7605551212" required></label>
-                    <label>Zip Code <input type="number" name="zipcode" placeholder="90210"></label>
+                    <label class="above">Full Name *<input type="text" name="name" placeholder="John Doe" pattern="[A-Za-z\s]{5,}" required></label>
+                    <label class="above">Email <input type="text" name="email" placeholder="email@domain.com"></label>
+                    <label class="above">Phone *<input type="tel" name="phone" placeholder="7605551212" pattern="[+.\-0-9\s()]{10,}" required></label>
+                    <label class="above">Zip Code <input type="number" name="zipcode" placeholder="90210" required></label>
                 </fieldset>
 
                 <!-- fieldset 2 Storm Data Submission -->
                 <fieldset>
-                    <legend>Storm Information</legend>
-                    <label>Date <input type="date" name="complete"></label>
-                    <label>Type
+                    <legend>Storm Report</legend>
+                    <label class="above">Date <input type="date" name="stormDate"></label>
+                    <label class="above">Type
                         <input list="stormTypes" placeholder="Enter Storm Type" name="stormType">
                         <datalist id="stormTypes">
                             <option value="Flash Flood">
@@ -66,27 +70,28 @@
                             <option value="Tornado">
                         </datalist>
                     </label>
-                    <label>Severity <input type="range" min="1" value="5" max="10" step="1" name="severity"
+                    <label class="above">Severity&nbsp;&nbsp;[<span id="stormRating">5</span>]
+                        <input type="range" min="1" value="5" max="10" step="1" name="stormSeverity"
                                     oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
-                                    <span id="stormRating">5</span>
                     </label>
-                    <label>Region
-                        <select name="location">
+                    <label class="above">Region
+                        <select name="stormLocation">
                             <option value="" disabled selected>Select Region...</option>
                             <option value="Franklin">Franklin</option>
                             <option value="Greenville">Greenville</option>
-                            <option value="Springfield">Spriengfield</option>
+                            <option value="Springfield">Springfield</option>
                         </select>
                     </label>
-                    <label>Currently In Danger?
-                        <input type="radio" name="inDanger" value="yes"> Yes
-                        <input type="radio" name="inDanger" value="maybe"> Maybe
-                        <input type="radio" name="inDanger" value="no"> No
+                    <label class="above">Currently In Danger?</label>
+                        <label class="sxs"><input type="radio" name="inDanger" value="yes"> Yes</label>
+                        <label class="sxs"><input type="radio" name="inDanger" value="maybe"> Maybe</label>
+                        <label class="sxs"><input type="radio" name="inDanger" value="no"> No</label>
+                    <label class="above">Additional Commments &amp; Info
+                        <textarea name="stormInfoComments" rows="8"></textarea>
                     </label>
-                    <!-- text area here -->
                 </fieldset>
 
-                <input type="submit" value="Report My Storm" class="submissionButton">
+                <input class="submissionButton" type="submit" value="Report My Storm">
             </form>
 
         </main>

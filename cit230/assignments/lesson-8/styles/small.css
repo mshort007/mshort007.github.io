@@ -231,11 +231,11 @@ form input.submissionButton {
 }
 
 form label.above input:required {
-    border: red solid 4px;
+    border-left: red solid 5px;
 }
 
 form label.above input:required:valid {
-    border: green solid 3px;
+    border-left: green solid 5px;
 }
 
 .stormCenterIntro {

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Weather Vane</title>
+        <meta name="author" content="Michael Short">
+        <meta name="description" content="The Weather Vane, Weather Conditions and News for the Franklin, Springfield, and Greenville Regions">
+        <!-- external style references in the proper cascading order -->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">  <!-- Google API font reference -->
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
+        <link href="styles/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
+        <link href="styles/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+    </head>
+
+    <body>
+        <header>
+            <img src="images/WeatherVaneLogo-md.png" alt="The Weather Vane Logo"
+                 sizes="100vw"
+                 srcset="images/WeatherVaneLogo-sm.png 600w,
+                         images/WeatherVaneLogo-md.png 1024w,
+                         images/WeatherVaneLogo-lg.png 1920w">
+            <section class="headers">
+                <h1>The&nbsp;Weather&nbsp;Vane</h1>
+                <h2>Keeping&nbsp;You&nbsp;Informed,&nbsp;Rain&nbsp;or&nbsp;Shine.</h2>
+            </section>
+            <!-- <div class="subheading">Keeping&nbsp;You&nbsp;Informed,&nbsp;Rain&nbsp;or&nbsp;Shine.</div> -->
+        </header>
+
+        <!-- site navigation using placeholder references for other pages -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul id="navMenu" class="hide">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="franklin.html">Franklin</a></li>
+                <li><a href="#">Greenville</a></li>
+                <li><a href="#">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="weather-story">
+                <div class="wstory">
+                    <h2>Weather Story</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit arcu ipsum, in ullamcorper erat feugiat vitae. Vivamus porttitor ex sed ex hendrerit lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum maximus justo at dolor volutpat iaculis. Morbi a arcu condimentum, vulputate elit sit amet, ornare nunc. Integer at augue fringilla, blandit tellus quis, pretium mi. Nullam a facilisis massa. Vestibulum id neque quis libero condimentum facilisis. Fusce iaculis semper congue. Aliquam pulvinar, massa sed viverra mattis, nibh arcu dignissim lorem, a ornare risus ex pellentesque enim. Donec elementum euismod augue, vel finibus sem efficitur vitae.
+                    </p>
+                </div>
+                <div class="wimage">
+                    <img src="images/weather-md.jpg" alt="Weather Story Header Image"
+                         sizes="100vw"
+                         srcset="images/weather-sm.jpg 600w,
+                                 images/weather-md.jpg 1024w,
+                                 images/weather-lg.jpg 1920w">
+                </div>
+            </section>
+
+            <section class="town-info">
+
+                <div class="franklin-city">
+                    <div class="franklin-data">
+                        <h3>Franklin City</h3>
+                        <span id="frMotto">-</span><br><br>
+                        Founded: <span id="frFounded">-</span><br>
+                        Population: <span id="frPopulation">-</span><br>
+                        Annual Rainfall: <span id="frRainfall">-</span> inches<br>
+                    </div>
+                    <div class="franklin-img">
+                        <img src="images/countryside-medium.jpg" alt="Image of the Franklin Region"
+                             sizes="100vw"
+                             srcset="images/countryside-small.jpg 600w,
+                                     images/countryside-medium.jpg 1024w,
+                                     images/countryside-large.jpg 1920w">
+                    </div>
+                </div>
+
+                <div class="greenville-city">
+                    <div class="greenville-data">
+                        <h3>Greenville</h3>
+                        <span id="grMotto">-</span><br><br>
+                        Founded: <span id="grFounded">-</span><br>
+                        Population: <span id="grPopulation">-</span><br>
+                        Annual Rainfall: <span id="grRainfall">-</span> inches<br>
+                    </div>
+                    <div class="greenville-img">
+                        <img src="images/greenville-md.jpg" alt="Image of the Greenville Region"
+                             sizes="100vw"
+                             srcset="images/greenville-sm.jpg 600w,
+                                     images/greenville-md.jpg 1024w,
+                                     images/greenville-lg.jpg 1920w">
+                    </div>
+                </div>
+
+                <div class="springfield-city">
+                    <div class="springfield-data">
+                        <h3>Springfield</h3>
+                        <span id="spMotto">-</span><br><br>
+                        Founded: <span id="spFounded">-</span><br>
+                        Population: <span id="spPopulation">-</span><br>
+                        Annual Rainfall: <span id="spRainfall">-</span> inches<br>
+                    </div>
+                    <div class="springfield-img">
+                        <img src="images/springfield-md.jpg" alt="Image of the Springfield Region"
+                             sizes="100vw"
+                             srcset="images/springfield-sm.jpg 600w,
+                                     images/springfield-md.jpg 1024w,
+                                     images/springfield-lg.jpg 1920w">
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <section class="contact">
+                <div class="contact-left">
+                    <b>Address:</b><br>
+                    The Weather Vane<br>
+                    123 Main St.<br>
+                    Franklin, MI 87654<br><br>
+                </div>
+                <div class="contact-right">
+                    <b>Phone:</b><br>
+                    (801) 555-1234<br>
+                    <br>
+                    <b>Email:</b><br>
+                    info@theweathervane.com
+                </div>
+            </section>
+            <section class="footer-bar">
+                &copy;2018 | All&nbsp;Rights&nbsp;Reserved | The&nbsp;Weather&nbsp;Vane | <span id="currentdate"></span>
+            </section>
+        </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script>
+            function replaceDate() {
+                document.getElementById("currentdate").textContent = getTodaysDate(new Date());
+            }
+            replaceDate();
+        </script>
+        <script src="scripts/townstats.js"></script>
+
+    </body>
+</html>

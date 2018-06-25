@@ -1,5 +1,5 @@
 var statsRequest = new XMLHttpRequest();
-var statsURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+var statsURL = '//byui-cit230.github.io/weather/data/towndata.json';
 
 statsRequest.open('GET', statsURL, true);
 statsRequest.send();

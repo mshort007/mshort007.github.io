@@ -49,18 +49,18 @@
     }
 
     .town-info {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 20px;
+        grid-template-columns: 31% 31% 31%;
+        grid-column-gap: 1.5%;
         max-width: 100%;
         width: 100%;
-        margin: 0 0;
+        margin: 0 2%;
     }
     .franklin-city {
         display: block;
         border: solid lightgray 1px;
         background: #F3F3F3;
         box-shadow: 5px 5px 8px lightgray;
-        margin: 2% 2%;
+        margin: 2% 0;
         width: 100%;
     }
     .franklin-data {
@@ -75,6 +75,7 @@
     }
     .franklin-img {
         margin: 0;
+        text-align: center;
     }
 
     .greenville-city {
@@ -82,7 +83,7 @@
         border: solid lightgray 1px;
         background: #F3F3F3;
         box-shadow: 5px 5px 8px lightgray;
-        margin: 2% 2%;
+        margin: 2% 0;
         width: 100%;
     }
     .greenville-data {
@@ -97,6 +98,7 @@
     }
     .greenville-img {
         margin: 0;
+        text-align: center;
     }
 
     .springfield-city {
@@ -104,12 +106,12 @@
         border: solid lightgray 1px;
         background: #F3F3F3;
         box-shadow: 5px 5px 8px lightgray;
-        margin: 2% 2%;
-        width: 90%;
+        margin: 2% 0;
+        width: 100%;
     }
     .springfield-data {
         margin: 0;
-        width: 90%;
+        width: 100%;
         text-align: center;
         box-shadow: none;
         border: none;
@@ -119,9 +121,7 @@
     }
     .springfield-img {
         margin: 0;
-        padding: 0;
-        width: 90%;
-        max-width: 1fr;
+        text-align: center;
     }
 
 

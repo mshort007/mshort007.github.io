@@ -1,0 +1,280 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+header img {
+    margin: 1% 1%;
+    flex: 0 1 auto;
+    min-height: 60px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-family: "Brush Script MT", "Vladimir Script", cursive, sans-serif;
+    color: #555;
+    margin: 0;
+    padding: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-size: .7rem;
+}
+
+.headers {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav button {
+    margin: 10px 0 10px 10px;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: none;
+}
+
+nav {
+    width: 100%;
+    background-color: #555;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 20px 16px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+nav ul li a:link {
+    background-color: #555;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color:  white;
+}
+
+nav ul li a:active {
+    background-color: white;
+    color: #555;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+nav img {
+    width: 100%;
+}
+
+main h1,h2,h3 {
+    text-align: left;
+    margin: 2%;
+}
+
+.current img {
+    width: 35%;
+    padding: 0 2% 0 2%;
+}
+
+article {
+    display: block;
+    margin: 1% 1% 1% 1%;
+}
+
+article p {
+    text-align: justify;
+    text-rendering: optimizeLegibility;
+    line-height: 1.50em;
+    margin: 8px 0 8px 0;
+    vertical-align: text-top;
+}
+
+article img {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.active {
+    background-color: white;
+    color: #555;
+}
+
+.forecast {
+    display: none;
+}
+
+.contact {
+    border-top: 2px solid dimgrey;
+    margin: 0;
+    padding: 15px 0 10px 2%;
+    background-color: lightgrey
+}
+
+footer .footer-bar {
+    text-align: center;
+    color: white;
+    background-color: dimgrey;
+    margin: 0;
+    padding: 2% 0 2% 0;
+}
+
+.image-gallery {
+   display: grid;
+   grid-template-columns: 1fr;
+  /* border: 2px dashed red; */
+   justify-content: center;
+
+  /* grid-gap: 20px; */
+}
+
+.image-gallery figure {
+    margin: 0;
+    /* border: 3px dashed blue; */
+}
+
+.image-gallery figcaption {
+    text-align: center;
+}
+
+.image-gallery img {
+    border-radius: 2%;
+    width: 100%;
+}
+
+/* clearfix */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* -----  FORM DATA  ----- */
+form legend {
+    color: blue;
+    padding: 0 .5rem;
+    margin: 0 1.25rem;
+}
+
+form fieldset {
+    border-radius: 15px;
+    margin: 1rem;
+    border: 2px solid darkgrey;
+    padding: 1rem;
+}
+
+form label.above {
+    display: block;
+    padding-top: 1rem;
+    color: darkslateblue;
+}
+
+form label.above input, form label.above select {
+    display: block;
+    border-radius: 4px;
+    padding: .75rem .25rem .75rem .25rem;
+    font-size: 1rem;
+    width: 96%;
+    max-width: 20rem;
+    color: darkblue;
+    background-color: #eeeeee;
+}
+
+form label.sxs {
+    display: block;
+    padding: .75rem 0;
+    color: darkslateblue;
+}
+
+form label textarea {
+    display: block;
+    width: 96%;
+    max-width: 40rem;
+    color: darkblue;
+    background-color: #eeeeee;
+    border-radius: 4px;
+}
+
+form input.submissionButton {
+    background-color: darkblue;
+    color: #eeeeee;
+    border-radius: 15px;
+    border-color: darkgrey;
+    box-shadow: 5px 5px 15px grey;
+    width: 92%;
+    margin: 0 0 1rem 1rem;
+    padding: 1rem;
+    max-width: 20rem;
+}
+
+form label.above input:required {
+    border-left: red solid 5px;
+}
+
+form label.above input:required:valid {
+    border-left: green solid 5px;
+}
+
+.stormCenterIntro {
+    margin: 0 1rem;
+    padding: 0;
+    line-height: 1.5rem;
+}
+
+.town-info {
+    display: none;
+}
+
+.weather-story {
+    display: block;
+    border: solid black 1px;
+    margin: 2%;
+}
+
+.wimage img {
+    width: 96%;
+    margin: 2%
+}
+
+.wstory h2 {
+    text-align: center;
+}
+
+.wstory p {
+    text-align: justify;
+    margin: 2%
+}
+
+#requiredAttrib {
+    font-size: 8pt;
+    margin: 0;
+    padding: 10px 0 10px 2%;
+    background-color: lightgrey;
+}
+
+
+
+

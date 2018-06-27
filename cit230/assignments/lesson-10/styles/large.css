@@ -1,0 +1,129 @@
+@media only screen and (min-width: 64em) {
+
+    header h1 {
+        font-size: 6rem;
+    }
+
+    header h2 {
+        font-size: 1.75rem;
+    }
+
+    nav ul li a {
+        line-height: 50px;
+        padding: .5rem 1rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .image-gallery figure:hover > img {
+        box-shadow: 10px 10px 10px dimgrey;
+    }
+
+    .image-gallery figure:hover > figcaption {
+        text-shadow: 5px 5px 2px dimgrey;
+    }
+
+    article {
+        display: inline-block;
+        margin: 0 0 25px 0;
+    }
+
+    article p {
+        width: 65%;
+    }
+
+    article img {
+        float: right;
+        width: 30%;
+        margin: 0;
+    }
+
+    form label.sxs {
+        padding: .4rem 0;
+    }
+
+    form label.above input, form label.above select {
+        padding: .25rem;
+    }
+
+    .town-info {
+        grid-template-columns: 31% 31% 31%;
+        grid-column-gap: 1.5%;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 2%;
+    }
+    .franklin-city {
+        display: block;
+        border: solid lightgray 1px;
+        background: #F3F3F3;
+        box-shadow: 5px 5px 8px lightgray;
+        margin: 2% 0;
+        width: 100%;
+    }
+    .franklin-data {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        border: none;
+    }
+    .franklin-data h3 {
+        text-align: center;
+    }
+    .franklin-img {
+        margin: 0;
+        text-align: center;
+    }
+
+    .greenville-city {
+        display: block;
+        border: solid lightgray 1px;
+        background: #F3F3F3;
+        box-shadow: 5px 5px 8px lightgray;
+        margin: 2% 0;
+        width: 100%;
+    }
+    .greenville-data {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        border: none;
+    }
+    .greenville-data h3 {
+        text-align: center;
+    }
+    .greenville-img {
+        margin: 0;
+        text-align: center;
+    }
+
+    .springfield-city {
+        display: block;
+        border: solid lightgray 1px;
+        background: #F3F3F3;
+        box-shadow: 5px 5px 8px lightgray;
+        margin: 2% 0;
+        width: 100%;
+    }
+    .springfield-data {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        border: none;
+    }
+    .springfield-data h3 {
+        text-align: center;
+    }
+    .springfield-img {
+        margin: 0;
+        text-align: center;
+    }
+
+
+
+}

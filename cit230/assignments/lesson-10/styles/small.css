@@ -77,16 +77,6 @@ nav ul li a:active {
     color: #555;
 }
 
-li:active {
-    background-color: white;
-    color: #555;
-}
-
-nav ul li:active {
-    background-color: white;
-    color: #555;
-}
-
 nav ul li {
     text-align: center;
 }
@@ -292,7 +282,7 @@ form label.above input:required:valid {
 .greenville-img {
     text-align: center;
     width: 96%;
-    margin: 2%
+    margin: 2%;
 }
 
 .springfield-city {
@@ -310,7 +300,7 @@ form label.above input:required:valid {
 .springfield-img {
     text-align: center;
     width: 96%;
-    margin: 2%
+    margin: 2%;
 }
 
 .weather-story {
@@ -321,7 +311,7 @@ form label.above input:required:valid {
 
 .wimage img {
     width: 96%;
-    margin: 2%
+    margin: 2%;
 }
 
 .wstory h2 {
@@ -330,7 +320,15 @@ form label.above input:required:valid {
 
 .wstory p {
     text-align: justify;
-    margin: 2%
+    margin: 2%;
+}
+
+footer .hidden {
+    display: none;
+}
+
+nav .hidden {
+    display: none;
 }
 
 #requiredAttrib {
@@ -339,7 +337,3 @@ form label.above input:required:valid {
     padding: 10px 0 10px 2%;
     background-color: lightgrey;
 }
-
-
-
-

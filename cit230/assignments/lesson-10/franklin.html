@@ -29,7 +29,7 @@
             <li>Current Temperature:&nbsp;<b><span id="currentTemp">-</span>&deg;F</b></li>
             <li>Current Condition:&nbsp;<b><span id="condition">-</span></b></li>
             <li>High:&nbsp;<b><span id="dailyhigh">-</span>&deg;F</b></li>
-            <li>Low:&nbsp;<b><span id="dailylow">66</span>&deg;F</b></li>
+            <li>Low:&nbsp;<b><span id="dailylow">-</span>&deg;F</b></li>
             <li>Chance of Precipitation:&nbsp;<b>0&#37;</b></li>
             <li>Wind:&nbsp;<b><span id="windspeed">-</span>&nbsp;mph</b></li>
             <li>Windchill:&nbsp;<b><span id="windchill"></span></b></li>
@@ -91,45 +91,16 @@
 
   </main>
 
-  <footer>
-    <section class="contact">
-    <div class="contact-left">
-      <b>Address:</b><br>
-      The Weather Vane<br>
-      123 Main St.<br>
-      Franklin, MI 87654<br><br>
-    </div>
-    <div class="contact-right">
-      <b>Phone:</b><br>
-      (801) 555-1234<br>
-      <br>
-      <b>Email:</b><br>
-      info@theweathervane.com
-    </div>
-    </section>
-      <p id="requiredAttrib">Weather Data provided by
-          <a href="https://openweathermap.org">OpenWeatherMap.org</a>
-          via the
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.
-      </p>
-    <section class="footer-bar">
-        &copy;2018 | All&nbsp;Rights&nbsp;Reserved | The&nbsp;Weather&nbsp;Vane | <span id="currentdate"></span>
-    </section>
-
+  <footer includefile="footer.html">
   </footer>
+
   <script src="scripts/include.js"></script>
   <script src="scripts/hamburger.js"></script>
   <script src="scripts/currentdate.js"></script>
   <script src="scripts/weather.js"></script>
   <script src="scripts/windchill.js"></script>
   <script src="scripts/activateNav.js"></script>
-
-  <script>
-    function replaceDate() {
-        document.getElementById("currentdate").textContent = getTodaysDate(new Date());
-    }
-    replaceDate();
-  </script>
+  <script src="scripts/attribution.js"></script>
 
 </body>
 </html>

@@ -77,6 +77,16 @@ nav ul li a:active {
     color: #555;
 }
 
+li:active {
+    background-color: white;
+    color: #555;
+}
+
+nav ul li:active {
+    background-color: white;
+    color: #555;
+}
+
 nav ul li {
     text-align: center;
 }
@@ -245,7 +255,62 @@ form label.above input:required:valid {
 }
 
 .town-info {
-    display: none;
+    display: block;
+    width: 100%;
+}
+
+.franklin-city {
+    border: solid black 1px;
+    margin: 2%;
+}
+.franklin-data {
+    margin: 0 2%;
+    width: 96%;
+    text-align: center;
+}
+.franklin-data h3 {
+    text-align: center;
+}
+.franklin-img {
+    text-align: center;
+    width: 96%;
+    margin: 2%
+}
+
+.greenville-city {
+    border: solid black 1px;
+    margin: 2%;
+}
+.greenville-data {
+    margin: 0 2%;
+    width: 96%;
+    text-align: center;
+}
+.greenville-data h3 {
+    text-align: center;
+}
+.greenville-img {
+    text-align: center;
+    width: 96%;
+    margin: 2%
+}
+
+.springfield-city {
+    border: solid black 1px;
+    margin: 2%;
+}
+.springfield-data {
+    margin: 0 2%;
+    width: 96%;
+    text-align: center;
+}
+.springfield-data h3 {
+    text-align: center;
+}
+.springfield-img {
+    text-align: center;
+    width: 96%;
+    margin: 2%
 }
 
 .weather-story {

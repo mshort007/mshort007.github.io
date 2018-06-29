@@ -15,3 +15,9 @@ function getTodaysDate(date) {
 
     return days[weekday] + ',' + String.fromCharCode(160) + day + String.fromCharCode(160) + monthNames[monthIndex] + String.fromCharCode(160) + year;
 }
+
+function replaceDate() {
+    document.getElementById("currentdate").textContent = getTodaysDate(new Date());
+}
+
+setTimeout(replaceDate, 2000);

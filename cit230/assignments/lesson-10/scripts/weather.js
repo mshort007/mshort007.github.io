@@ -1,10 +1,20 @@
-var frWeatherRequest = new XMLHttpRequest();
-var frApiURL = '//api.openweathermap.org/data/2.5/weather?id=4156210&APPID=dd14403260f2bc5da5d473915847cf4f&units=imperial';
-frWeatherRequest.open('GET', frApiURL, true);
-frWeatherRequest.send();
+var WeatherRequest = new XMLHttpRequest();
+var apiURL;
+var splitUrlArray = (document.location.href).split('/');
+var currentPage = splitUrlArray[splitUrlArray.length - 1];
 
-frWeatherRequest.onload =  function () {
-    var weatherData = JSON.parse(frWeatherRequest.responseText);
+if (currentPage === "franklin.html") {
+    apiURL = '//api.openweathermap.org/data/2.5/weather?id=4156210&APPID=dd14403260f2bc5da5d473915847cf4f&units=imperial';
+} else if (currentPage === "greenville.html") {
+    apiURL = '//api.openweathermap.org/data/2.5/weather?id=5564488&APPID=dd14403260f2bc5da5d473915847cf4f&units=imperial';
+} else if (currentPage === "springfield.html") {
+    apiURL = '//api.openweathermap.org/data/2.5/weather?id=5093030&APPID=dd14403260f2bc5da5d473915847cf4f&units=imperial';
+}
+WeatherRequest.open('GET', apiURL, true);
+WeatherRequest.send();
+
+WeatherRequest.onload = function () {
+    var weatherData = JSON.parse(WeatherRequest.responseText);
     console.log(weatherData);
 
     document.getElementById('currentTemp').innerHTML = weatherData.main.temp;
@@ -22,3 +32,5 @@ frWeatherRequest.onload =  function () {
 // Franklin: 4156210
 // Springfield: 5093030
 // Greenville: 5564488
+
+

@@ -15,28 +15,10 @@
     </head>
 
     <body>
-        <header>
-            <img src="images/WeatherVaneLogo-md.png" alt="The Weather Vane Logo"
-                 sizes="100vw"
-                 srcset="images/WeatherVaneLogo-sm.png 600w,
-                         images/WeatherVaneLogo-md.png 1024w,
-                         images/WeatherVaneLogo-lg.png 1920w">
-            <section class="headers">
-                <h1>The&nbsp;Weather&nbsp;Vane</h1>
-                <h2>Keeping&nbsp;You&nbsp;Informed,&nbsp;Rain&nbsp;or&nbsp;Shine.</h2>
-            </section>
+        <header includefile="header.html">
         </header>
 
-        <nav>
-            <button onclick="toggleNavMenu()">&#9776;</button>
-            <ul id="navMenu" class="hide">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="franklin.html">Franklin</a></li>
-                <li><a href="#">Greenville</a></li>
-                <li><a href="#">Springfield</a></li>
-                <li><a class="active" href="stormcenter.html">Storm Center</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
+        <nav includefile="nav.html">
         </nav>
 
         <main>
@@ -96,26 +78,11 @@
 
         </main>
 
-        <footer>
-            <section class="contact">
-                <div class="contact-left">
-                    <b>Address:</b><br>
-                    The Weather Vane<br>
-                    123 Main St.<br>
-                    Franklin, MI 87654<br><br>
-                </div>
-                <div class="contact-right">
-                    <b>Phone:</b><br>
-                    (801) 555-1234<br>
-                    <br>
-                    <b>Email:</b><br>
-                    info@theweathervane.com
-                </div>
-            </section>
-            <section class="footer-bar">
-                &copy;2018 | All&nbsp;Rights&nbsp;Reserved | The&nbsp;Weather&nbsp;Vane | <span id="currentdate"></span>
-            </section>
+        <footer includefile="footer.html">
         </footer>
+
+        <script src="scripts/include.js"></script>
+        <script src="scripts/activateNav.js"></script>
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/attribution.js"></script>

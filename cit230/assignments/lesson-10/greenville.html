@@ -20,6 +20,63 @@
     <nav includefile="nav.html">
     </nav>
 
+    <main>
+        <h1>The City of Greenville</h1>
+        <section class="weather-summary">
+            <h2>Today's Weather</h2>
+            <ul>
+                <li>Current Temperature:&nbsp;<b><span id="currentTemp">-</span>&deg;F</b></li>
+                <li>Current Condition:&nbsp;<b><span id="condition">-</span></b></li>
+                <li>High:&nbsp;<b><span id="dailyhigh">-</span>&deg;F</b></li>
+                <li>Low:&nbsp;<b><span id="dailylow">-</span>&deg;F</b></li>
+                <li>Chance of Precipitation:&nbsp;<b>0&#37;</b></li>
+                <li>Wind:&nbsp;<b><span id="windspeed">-</span>&nbsp;mph</b></li>
+                <li>Windchill:&nbsp;<b><span id="windchill"></span></b></li>
+            </ul>
+        </section>
+
+        <section class="current">
+            <h2>Current Condition</h2>
+            <img id="weather_icon" src="images/placeholder.png" alt="Current Conditions in Greenville">
+        </section>
+
+
+        <section class="forecast">
+            <h2>Forecast Details</h2>
+            <h3>Ten Day Forecast</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day 1</th>
+                        <th>Day 2</th>
+                        <th>Day 3</th>
+                        <th>Day 4</th>
+                        <th>Day 5</th>
+                        <th>Day 6</th>
+                        <th>Day 7</th>
+                        <th>Day 8</th>
+                        <th>Day 9</th>
+                        <th>Day 10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>64&deg;F</td>
+                        <td>67&deg;F</td>
+                        <td>69&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>73&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>75&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>69&deg;F</td>
+                        <td>71&deg;F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
 
     <footer includefile="footer.html">
     </footer>
@@ -28,5 +85,8 @@
     <script src="scripts/activateNav.js"></script>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/currentdate.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/windchill.js"></script>
     <script src="scripts/attribution.js"></script>
 </body>
+</html>

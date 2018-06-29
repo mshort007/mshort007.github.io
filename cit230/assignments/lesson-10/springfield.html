@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City of Springfield | Weather | The Weather Vane</title>
+    <meta name="author" content="Michael Short">
+    <meta name="description" content="Weather for the City of Springfield, Highs and Lows, Current Conditions, 10 Day Forecast, News">
+    <!-- external style references in the proper cascading order -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">  <!-- Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
+    <link href="styles/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
+    <link href="styles/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+</head>
+<body>
+    <header includefile="header.html">
+    </header>
+
+    <nav includefile="nav.html">
+    </nav>
+
+    <main>
+        <h1>The City of Springfield</h1>
+        <section class="weather-summary">
+            <h2>Today's Weather</h2>
+            <ul>
+                <li>Current Temperature:&nbsp;<b><span id="currentTemp">-</span>&deg;F</b></li>
+                <li>Current Condition:&nbsp;<b><span id="condition">-</span></b></li>
+                <li>High:&nbsp;<b><span id="dailyhigh">-</span>&deg;F</b></li>
+                <li>Low:&nbsp;<b><span id="dailylow">-</span>&deg;F</b></li>
+                <li>Chance of Precipitation:&nbsp;<b>0&#37;</b></li>
+                <li>Wind:&nbsp;<b><span id="windspeed">-</span>&nbsp;mph</b></li>
+                <li>Windchill:&nbsp;<b><span id="windchill"></span></b></li>
+            </ul>
+        </section>
+
+        <section class="current">
+            <h2>Current Condition</h2>
+            <img id="weather_icon" src="images/placeholder.png" alt="Current Conditions in Springfield">
+        </section>
+
+
+        <section class="forecast">
+            <h2>Forecast Details</h2>
+            <h3>Ten Day Forecast</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day 1</th>
+                        <th>Day 2</th>
+                        <th>Day 3</th>
+                        <th>Day 4</th>
+                        <th>Day 5</th>
+                        <th>Day 6</th>
+                        <th>Day 7</th>
+                        <th>Day 8</th>
+                        <th>Day 9</th>
+                        <th>Day 10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>89&deg;F</td>
+                        <td>87&deg;F</td>
+                        <td>90&deg;F</td>
+                        <td>97&deg;F</td>
+                        <td>103&deg;F</td>
+                        <td>101&deg;F</td>
+                        <td>94&deg;F</td>
+                        <td>89&deg;F</td>
+                        <td>83&deg;F</td>
+                        <td>78&deg;F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer includefile="footer.html">
+    </footer>
+
+    <script src="scripts/include.js"></script>
+    <script src="scripts/activateNav.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/attribution.js"></script>
+</body>
+</html>

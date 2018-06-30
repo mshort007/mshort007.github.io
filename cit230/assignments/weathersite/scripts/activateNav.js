@@ -30,7 +30,8 @@ function hideNavBanner(prefix) {
 }
 
 function activateNav() {
-    var urlString, urlArray, pageHREF, menu, i, currentURL, prefixArray, prefix;
+    var urlString, urlArray, pageHREF, menu, i, currentURL, prefixArray, prefix, wasFound;
+    wasFound = false;
     urlString = document.location.href;
     urlArray = urlString.split('/');
     pageHREF = urlArray[urlArray.length - 1];
@@ -45,7 +46,13 @@ function activateNav() {
             if (currentURL === pageHREF) {
                 menu[i].className = 'active';
                 hideNavBanner(prefix);
+                wasFound = true;
             }
+        }
+        if (!wasFound) {
+            //this will catch special pages like the thankyou.html
+            //that do not have an entry in the <nav> section.
+            hideNavBanner(null);
         }
     }
 }

@@ -2,7 +2,7 @@
     "services" : [
         {
             "tableName" : "Brakes",
-            "tableItems" : [
+            "tableItems" : {
                 "Adjust/Install Rim Brake Pads" : "$9.99",
                 "Adjust/Install Disc Brake Pads" : "$14.99",
                 "Install Hydraulic Disc Brakes" : "$24.99",
@@ -12,7 +12,7 @@
                 "Install Brake Levers" : "$12.99",
                 "Install Rotor" : "$7.99",
                 "Bleed Hydraulic Disc Brake" : "$14.99"
-            ]
+            }
         }
     ]
 }

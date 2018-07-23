@@ -1,0 +1,84 @@
+@media only screen and (min-width: 37.5em) {
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav ul.hide {
+        display: contents;
+    }
+
+    /* This controls whether a <br> or ' | ' will be used in the footer. */
+    .footHorizontalSep {
+        display: contents;
+    }
+    .footVerticalSep {
+        display: none;
+    }
+
+    .navSep {
+        display: contents;
+    }
+
+    nav {
+        display: flex;
+        padding: 0 0 0 2%;
+    }
+
+    nav ul li {
+        display: inline-flex;
+        border: none;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a:link {
+        background-color: #afbcbb;
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        background-color: #afbcbb;
+        color: forestgreen;
+    }
+
+    nav ul li a:active {
+        background-color: #84aab7;
+        color: #afbcbb;
+    }
+
+    .active {
+        background-color: #afbcbb;
+        color: white;
+    }
+
+    #CallToActionEmailSignup form {
+        margin: 1% 2% 1% 2%;
+        font-size: 1.1rem
+    }
+    .mailingListButton {
+        padding: 8px 8px;
+        margin: 1% 0 0 0;
+    }
+    .mailingListEmail {
+        margin: 0;
+    }
+    .mailingList input {
+        font-size: 1.10rem;
+        padding: 5px;
+    }
+
+    #mainGroupsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+    }
+
+}

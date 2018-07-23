@@ -1,0 +1,27 @@
+@media only screen and (min-width: 64em) {
+
+    nav ul li a {
+        font-size: 1.25rem;
+    }
+
+    #CallToActionEmailSignup p {
+        margin: 4px 2% 2px 2%;
+    }
+
+    #CallToActionEmailSignup form {
+        margin: 2px 2% 4px 2%;
+        font-size: 1rem;
+    }
+    .mailingListButton {
+        padding: 5px 5px;
+        margin: 0;
+    }
+    .mailingListEmail {
+        margin: 0;
+    }
+    .mailingList input {
+        font-size: 1rem;
+        padding: 4px;
+    }
+
+}

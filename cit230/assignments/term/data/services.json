@@ -13,6 +13,65 @@
                 { "serviceName" : "Install Rotor", "servicePrice" : "$7.99" },
                 { "serviceName" : "Bleed Hydraulic Disc Brake", "servicePrice" : "$14.99" }
             ]
-        }
+        },
+		{
+            "tableName" : "Drivetrain",
+            "tableItems" : [
+                { "serviceName" : "Install or Overhaul Bottom Bracket", "servicePrice" : "$14.99" },
+                { "serviceName" : "Install Chain", "servicePrice" : "$14.99" },
+                { "serviceName" : "Remove/Clean/Reinstall Chain", "servicePrice" : "$9.99" },
+                { "serviceName" : "Install Pedals", "servicePrice" : "$4.99" },
+                { "serviceName" : "Install Crank (1 Piece)", "servicePrice" : "$14.99" },
+                { "serviceName" : "Install Crank (3 Piece)", "servicePrice" : "$23.99" }
+            ]
+        },
+		{
+            "tableName" : "Shifter/Derailleur",
+            "tableItems" : [
+                { "serviceName" : "Adjust Derailleur (Front or Rear)", "servicePrice" : "$14.99" },
+                { "serviceName" : "Install Front Derailleur", "servicePrice" : "$6.99" },
+                { "serviceName" : "Install Rear Derailleur", "servicePrice" : "$11.99" },
+                { "serviceName" : "Install Shifter (Each)", "servicePrice" : "$12.99" },
+                { "serviceName" : "Install Shifter Cables/Housing", "servicePrice" : "$12.99" }
+            ]
+        },
+		{
+            "tableName" : "Wheels",
+            "tableItems" : [
+                { "serviceName" : "Install Inner Tube", "servicePrice" : "$6.99" },
+                { "serviceName" : "Repair Inner Tube", "servicePrice" : "$8.99" },
+                { "serviceName" : "True Wheel", "servicePrice" : "$12.99" },
+                { "serviceName" : "Install Spoke (Each)", "servicePrice" : "$5.99" },
+                { "serviceName" : "Adjust Hub (Front or Rear)", "servicePrice" : "$5.99" },
+				{ "serviceName" : "Overhaul Front Hub", "servicePrice" : "$14.99" },
+                { "serviceName" : "Overhaul Rear Hub", "servicePrice" : "$18.99" },
+		        { "serviceName" : "Wheel Slime (Per Wheel)", "servicePrice" : "$4.99" }
+			]					  
+		},
+		{
+            "tableName" : "Handlebars/Fork/Headset",
+            "tableItems" : [
+                { "serviceName" : "Install Handlebars", "servicePrice" : "$9.99" },
+                { "serviceName" : "Install Bar Ends", "servicePrice" : "$6.99" },
+                { "serviceName" : "Install Handlebar Grips", "servicePrice" : "$6.99" },
+                { "serviceName" : "Install Handlebar Tape", "servicePrice" : "$8.99" },
+                { "serviceName" : "Install Fork", "servicePrice" : "$34.99" },
+				{ "serviceName" : "Headset Adjustments", "servicePrice" : "$7.99" },
+                { "serviceName" : "Install or Overhaul Headset", "servicePrice" : "$17.99" }
+			]					  
+		},
+		{
+            "tableName" : "Installs",
+            "tableItems" : [
+                { "serviceName" : "Child Carrier", "servicePrice" : "$14.99" },
+                { "serviceName" : "Cycle Computer", "servicePrice" : "$9.99" },
+                { "serviceName" : "Fenders", "servicePrice" : "$12.99" },
+                { "serviceName" : "Kickstand", "servicePrice" : "$1.99" },
+                { "serviceName" : "Rear Rack", "servicePrice" : "$4.99" },
+				{ "serviceName" : "Saddle", "servicePrice" : "$1.99" },
+                { "serviceName" : "Training Wheels ", "servicePrice" : "$12.99" },
+				{ "serviceName" : "Water Bottle Cage", "servicePrice" : "$1.99" }
+			]					  
+		}		
     ]
 }

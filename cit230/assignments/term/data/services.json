@@ -2,17 +2,17 @@
     "services" : [
         {
             "tableName" : "Brakes",
-            "tableItems" : {
-                "Adjust/Install Rim Brake Pads" : "$9.99",
-                "Adjust/Install Disc Brake Pads" : "$14.99",
-                "Install Hydraulic Disc Brakes" : "$24.99",
-                "Install Mechanical Disc Brakes" : "$14.99",
-                "Install Rim Brake Set" : "$12.99",
-                "Install Brake Cables/Housing" : "$9.99",
-                "Install Brake Levers" : "$12.99",
-                "Install Rotor" : "$7.99",
-                "Bleed Hydraulic Disc Brake" : "$14.99"
-            }
+            "tableItems" : [
+                { "serviceName" : "Adjust/Install Rim Brake Pads", "servicePrice" : "$9.99" },
+                { "serviceName" : "Adjust/Install Disc Brake Pads", "servicePrice" : "$14.99" },
+                { "serviceName" : "Install Hydraulic Disc Brakes", "servicePrice" : "$24.99" },
+                { "serviceName" : "Install Mechanical Disc Brakes", "servicePrice" : "$14.99" },
+                { "serviceName" : "Install Rim Brake Set", "servicePrice" : "$12.99" },
+                { "serviceName" : "Install Brake Cables/Housing", "servicePrice" : "$9.99" },
+                { "serviceName" : "Install Brake Levers", "servicePrice" : "$12.99" },
+                { "serviceName" : "Install Rotor", "servicePrice" : "$7.99" },
+                { "serviceName" : "Bleed Hydraulic Disc Brake", "servicePrice" : "$14.99" }
+            ]
         }
     ]
 }

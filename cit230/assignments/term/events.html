@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Local Cycling Events | Events | The Mountain Spoke</title>
+        <title>Cycling Events | Events | The Mountain Spoke</title>
         <meta name="author" content="Michael Short">
         <meta name="description" content="">
         <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans|Pacifico" rel="stylesheet">
@@ -21,9 +21,22 @@
         </nav>
 
         <main>
+            <h1>Cycling Events</h1>
+            <!-- The event page should highlight the "Cycle the Continental Divide" annual event with information about the dates, route, costs, and basic requirements. Be sure to include a registration form on the page that collects information including the registrant's full name, email, phone, date of birth, home state or country, and special accommodations/comments. -->
 
-            Coming Soon...
 
+
+            <h2>Register Now for</h2>
+            <!-- full name, email, phone, date of birth, home state or country, and special accommodations/comments. -->
+            <form method="get" action="regComplete.html">
+                <label class="above">Full Name *<input type="text" name="name" placeholder="John Doe" pattern="[A-Za-z\s]{5,}" required></label>
+                <label class="above">Email *<input type="email" name="email" placeholder="email@domain.com" required></label>
+                <label class="above">Phone *<input type="tel" name="phone" placeholder="7605551212" pattern="[+.\-0-9\s()]{10,}" required></label>
+                <label class="above">Date of Birth<input type="date" name="birthdate"></label>
+                <label class="above">State/Country<input type="text" name="home" placeholder="Montana"></label>
+                <label class="above">Special Accomidations/Comments<textarea name="message" rows="8"></textarea></label>
+                <input class="registerButton" type="submit" value="Sign Me Up!">
+            </form>
         </main>
 
         <footer includefile="footer.html">

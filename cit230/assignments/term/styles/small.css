@@ -223,3 +223,60 @@ footer a:link, footer a:visited {
 .tableHeader {
     font-weight: bold;
     color: yellow;
+}
+
+.map {
+    align-content: center;
+    max-width: 100%;
+
+}
+
+form label.above {
+    display: block;
+    padding-top: 1rem;
+}
+
+form label.above input {
+    display: block;
+    width: 98%;
+    padding: .75rem .25rem .75rem .25rem;
+    font-family: 'Open Sans';
+    font-size: 1.25rem;
+    max-width: 20rem;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+form label textarea {
+    display: block;
+    width: 100%;
+    font-family: 'Open Sans';
+    font-size: 1.25rem;
+    max-width: 40rem;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.contactUsButton {
+    background-color: blue;
+    color: #eeeeee;
+    border-radius: 15px;
+    border-color: darkgrey;
+    padding: 12px 12px;
+    margin: 2% 0 0 0;
+}
+
+.registerButton {
+    background-color: blue;
+    color: #eeeeee;
+    border-radius: 15px;
+    border-color: darkgrey;
+    padding: 12px 12px;
+    margin: 2% 0 0 0;
+    font-size: 1.25rem;
+}
+
+.eventDetails u {
+    font-weight: bold;
+    font-size: 1.25rem;
+}

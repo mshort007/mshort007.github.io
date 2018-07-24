@@ -80,6 +80,25 @@
         grid-row-gap: 20px;
         grid-column-gap: 20px;
     }
+    form label.above {
+        display: block;
+        padding-top: .4rem;
+    }
 
+    form label.above input {
+        padding: .25rem .25rem .25rem .25rem;
+        font-size: 1rem;
+
+    }
+
+    form label textarea {
+       font-size: 1rem;
+    }
+
+    .contactUsButton, .registerButton {
+        padding: 10px 10px;
+        margin: 1% 0 0 0;
+        border-radius: 10px;
+    }
 
 }

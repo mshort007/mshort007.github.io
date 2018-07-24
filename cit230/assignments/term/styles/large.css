@@ -24,8 +24,12 @@
         padding: 4px;
     }
 
-    .contactUsButton {
-        padding: 10px 10px;
-        margin: 0 0 0 0;
+    form label.above input {
+        padding: 0 .25rem 0 .25rem;
+    }
+
+    .contactUsButton, .registerButton {
+        padding: 6px 6px;
+        margin: 6px 0 0 0;
     }
 }

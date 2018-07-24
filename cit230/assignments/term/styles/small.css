@@ -284,3 +284,24 @@ form label textarea {
 .mainGroup b {
     font-size: 1.25rem;
 }
+
+.ss_content {
+    display: none;
+    padding: 10px;
+}
+
+.ss_button {
+    background-color: green;
+    border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#accordion_menu div img {
+    width: 100%;
+}
+
+.ctaLogos {
+    width: 100%;
+}
+

@@ -306,3 +306,7 @@ form label textarea {
     border-radius: 12px;
 }
 
+.overview {
+    width: 100%;
+    max-width: 1280px;
+}

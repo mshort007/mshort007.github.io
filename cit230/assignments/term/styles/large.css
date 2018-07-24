@@ -32,4 +32,12 @@
         padding: 6px 6px;
         margin: 6px 0 0 0;
     }
+
+    .ss_content img {
+        max-width: 70%;
+    }
+
+    .ctaLogos {
+        border-radius: 25px;
+    }
 }

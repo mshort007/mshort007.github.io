@@ -101,4 +101,10 @@
         border-radius: 10px;
     }
 
+    .ss_content img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
 }

@@ -21,8 +21,70 @@
         </nav>
 
         <main>
-
-            Coming Soon...
+            <section id="accordion_menu">
+                <div class="ss_button">
+                    <h3>Nishiki Men's Anasazi Hybrid Bike</h3>
+                </div>
+                <div class="ss_content">
+                    <img src="images/mbike1.jpg">
+                    <p>
+                        Whether you're commuting to class or trekking on narrow singletracks, experience it all with the Nishiki® Men's Anasazi Hybrid Bike. Built with a durable aluminum frame, this bike cruises with stability. The reliable 700C wheels withstand terrain from rocky roads to smooth pavement, while the disc brakes deliver optimum stopping control.
+                    </p>
+                    <ul>
+                        <li>Price: $399.99</li>
+                        <li>Color: Blue</li>
+                        <li>Frame: 16", 18", or 20"</li>
+                    </ul>
+                </div>
+                <div class="ss_button">
+                    <h3>Schwinn Signature Men's Chute 27.5'' Mountain Bike</h3>
+                </div>
+                <div class="ss_content">
+                    <img src="images/mbike2.jpg">
+                    <p>
+                        With a versatile mountain bike design, the Schwinn Adult Chute 27.5’’ Mountain Bike is ready to take on the trails and excursions off the beaten path. The strong aluminum frame is equipped with a SR Suntour suspension fork, Shimano 21 speed EZ-Fire shifters, and linear pull brakes. Easily adjust the padded sport seat for the right height and fit.
+                    </p>
+                    <ul>
+                        <li>Price: $349.99</li>
+                        <li>Color: Matte Black</li>
+                        <li>Frame: 16", 18", 20", or 21"</li>
+                    </ul>
+                </div>
+                <div class="ss_button">
+                    <h3>GT Men's Pantera 27.5+ Mountain Bike</h3>
+                </div>
+                <div class="ss_content">
+                    <img src="images/mbike3.jpg">
+                    <p>
+                        With plus sized tires, the GT® Men’s Pantera 27.5+ Mountain Bike provides more control, traction, and confidence on the trails. The Pantera features a lightweight aluminum frame, disc brakes, and 18 speeds. You’ll be able to go through corners faster, ride new trails with ease, and have extra cushioning on rough tracks.
+                    </p>
+                    <ul>
+                        <li>Price: $599.99</li>
+                        <li>Color: Red</li>
+                        <li>Frame: 16", 18", or 20"</li>
+                    </ul>
+                </div>
+            </section>
+            <!--
+                Bike 1
+                    Nishiki Men's Anasazi Hybrid Bike
+                    Price: $399.99
+                    Color: Blue
+                    Frame: 16", 18", or 20"
+                    Whether you're commuting to class or trekking on narrow singletracks, experience it all with the Nishiki® Men's Anasazi Hybrid Bike. Built with a durable aluminum frame, this bike cruises with stability. The reliable 700C wheels withstand terrain from rocky roads to smooth pavement, while the disc brakes deliver optimum stopping control.
+                Bike 2
+                    Schwinn Signature Men's Chute 27.5'' Mountain Bike
+                    Price: $349.99
+                    Color: Matte Black
+                    Frame: 16" 18" 20" 21"
+                    With a versatile mountain bike design, the Schwinn Adult Chute 27.5’’ Mountain Bike is ready to take on the trails and excursions off the beaten path. The strong aluminum frame is equipped with a SR Suntour suspension fork, Shimano 21 speed EZ-Fire shifters, and linear pull brakes. Easily adjust the padded sport seat for the right height and fit.
+                Bike 3
+                    GT Men's Pantera 27.5+ Mountain Bike
+                    Price: $599.99
+                    Color: Red
+                    Frame: 18" or 19"
+                    Description: With plus sized tires, the GT® Men’s Pantera 27.5+ Mountain Bike provides more control, traction, and confidence on the trails. The Pantera features a lightweight aluminum frame, disc brakes, and 18 speeds. You’ll be able to go through corners faster, ride new trails with ease, and have extra cushioning on rough tracks.
+            -->
 
         </main>
 
@@ -33,5 +95,14 @@
         <script src="scripts/include.js"></script>
         <script src="scripts/activateNav.js"></script>
 
+        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function() {
+                $('.ss_button').on('click',function() {
+                    $('.ss_content').slideUp('fast');
+                    $(this).next('.ss_content').slideDown('fast');
+                });
+            });
+        </script>
     </body>
 </html>

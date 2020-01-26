@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="Parameters Example 1">
+	<title>CIT 261 - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+</head>
+<body>
+	<h1>Parameters Example 1</h1>
+	<main id="main">
+	
+	</main>
+</body>
+<script>
+	var output = "";
+	var greetingMsg = "Hi!";
+	
+	output += "Current Greeting: " + greetingMsg + "<br><br>";
+	// attempt to set to something invalid
+	setGreeting(123);
+	output += "Current Greeting: " + greetingMsg + "<br><br>";
+	// attempt to set to something valid
+	setGreeting("Hello Parameter Seekers!");
+	output += "Current Greeting: " + greetingMsg + "<br><br>";
+
+	var x = 1, y = 2, z = 3;
+	
+	output += "Perform addition by passing parameters to an addition function:<br><br>";
+	output += x + " + " + y + " = " + addNumbers(x,y) + "<br><br>";
+	output += y + " + " + z + " = " + addNumbers(y,z) + "<br><br>";
+	output += z + " + " + x + " = " + addNumbers(z,x) + "<br><br>";
+	
+	
+function setGreeting(a_strGreeting) {
+	// Check if the value passed into the function was a string before setting
+	if (typeof a_strGreeting === 'string') {
+		greetingMsg = a_strGreeting;
+	}
+}
+
+function addNumbers(a_val1, a_val2) {
+	var result;
+	
+	result = a_val1 + a_val2;
+	
+	return result;
+}	
+
+	document.getElementById("main").innerHTML = output;
+</script>
+</html>

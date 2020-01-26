@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="For Loops Example 4">
+	<title>CIT 261 - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+</head>
+<body>
+	<h1>For Loops Example 4 - while loop</h1>
+	<main id="main">
+	
+	</main>
+</body>
+<script>
+	var output = "";
+	var x, y;
+	x = y = 0;
+
+	while (x < 10) {
+		y += x;
+		output += "x is [" + x + "], y is [" + y + "]<br>";
+		x++;
+	}
+	
+	output += "<br><br>Final Value for y is [" + y + "]<br>";
+	document.getElementById("main").innerHTML = output;
+</script>
+</html>

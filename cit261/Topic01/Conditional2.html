@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="Conditional Statements Example 2">
+	<title>CIT 261 - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+</head>
+<body>
+	<h1>Conditional Statements Example 2 - else</h1>
+	<main id="main">
+	
+	</main>
+</body>
+<script>
+	var output = "";
+	var num = Math.floor(Math.random() * 11);
+
+	output = "Random Number from 0 to 10: [" + num + "]<br><br>Key:  0-4 = Happy, 5-10 = Sad<br><br>Message:<br>";
+	
+	if (num < 5) {
+		output += "I Feel Happy!<br><br>";
+	} else {
+		output += "I Feel Sad!<br><br>";
+	}
+
+	document.getElementById("main").innerHTML = output;
+</script>
+</html>

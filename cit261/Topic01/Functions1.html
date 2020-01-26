@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="Functions Example 1">
+	<title>CIT 261 - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+</head>
+<body>
+	<h1>Functions Example 1</h1>
+	<main id="main">
+	
+	</main>
+</body>
+<script>
+	var output = "";
+	output += "Happy " + getWeekday(new Date().getDay()) + "!<br><br>";
+	output += "Your Wisdom for Today is: <br><br>" + getWisdom() + "<br><br>";
+
+function getWeekday(day) {
+	var result = "";
+	switch (day) {
+		case 0:
+			result = "Sunday";
+			break;
+		case 1:
+			result = "Monday";
+			break;
+		case 2:
+			result = "Tuesday";
+			break;
+		case 3:
+			result = "Wednesday";
+			break;
+		case 4:
+			result = "Thursday";
+			break;
+		case 5:
+			result = "Friday";
+			break;
+		case 6:
+			result = "Saturday";
+			break;
+		default:
+			result = "Error: Unable to determine day!";
+
+	}
+	return result;
+}
+function getWisdom() {
+	var num = Math.floor(Math.random() * 11);
+	var wisdom = "";
+	
+	switch (num) {
+		case 0:
+			wisdom = "A little impatience will spoil great plans.";
+			break;
+		case 1:
+			wisdom = "A journey of a thousand miles begins with a single step."
+			break;
+		case 2:
+			wisdom = "The more acquaintances you have, the less you know them.";
+			break;
+		case 3:
+			wisdom = "Two good talkers are not worth one good listener.";
+			break;
+		case 4:
+			wisdom = "Patience is a bitter plant, but its fruit is sweet.";
+			break;
+		case 5:
+			wisdom = "The best time to plant a tree was 20 years ago. The second best time is today.";
+			break;
+		case 6:
+			wisdom = "A hundred no's are less agonizing than one insincere yes.";
+			break;
+		case 7:
+			wisdom = "He who asks is a fool for five minutes, but he who does not ask remains a fool forever.";
+			break;
+		case 8:
+			wisdom = "A man who cannot tolerate small misfortunes can never accomplish great things.";
+			break;
+		case 9:
+			wisdom = "Genius can be recognized by its childish simplicity.";
+			break;
+		case 10:
+			wisdom = "All things change, and we change with them.";
+			break;
+		default:
+			wisdom = "Error: Something went wrong while seeking wisdom!";
+			break;
+	}
+	
+	return wisdom;
+}	
+	document.getElementById("main").innerHTML = output;
+</script>
+</html>

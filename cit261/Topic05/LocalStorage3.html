@@ -1,0 +1,70 @@
+shoppingCart<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="Local Storage API Example 3">
+	<title>CIT 261 - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</title>
+</head>
+<body>
+	<h1>Local Storage API Example 3 - Removing Data</h1>
+	<main id="main">
+	
+	</main>
+</body>
+<script>
+	var output = "";
+	output += "Clearing out following from localStorage:<br><br>";
+	
+	// Only Attempt if localStorage API is supported
+	if (localStorageSupported()) {
+
+		// Lets remove the localStorage and sessionStorage Keys that we use.		
+		output += "Removing localStorage Keys: <br><br>";
+		
+		// lastVisit
+		output += "   lastVisit<br>";
+		localStorage.removeItem('lastVisit');
+		
+		// billingAddress
+		output += "   billingAddress<br>";
+		localStorage.removeItem('billingAddress');
+		
+		// shippingAddress
+		output += "   shippingAddress<br>";
+		localStorage.removeItem('SAstreet1');
+		localStorage.removeItem('SAcity');
+		localStorage.removeItem('SAstate');
+		localStorage.removeItem('SApostalCode');
+		
+		// shoppingCart
+		output += "   shoppingCart<br>";
+		localStorage.removeItem('shoppingCart');
+		
+		output += "<br><br>Removing sessionStorage Keys: <br><br>";
+		
+		// tmpData
+		output += "   tmpData<br>";
+		sessionStorage.removeItem('tmpData');
+		
+		// tmpData2
+		output += "   tmpData2<br>";
+		sessionStorage.removeItem('tmpData2');		
+		
+		
+		output += "<br><br>Done!<br><br>";
+
+	}
+	
+	
+function localStorageSupported() {
+	var result = false;
+	if (typeof(Storage) !== "undefined") {
+		result = true;
+	}
+	return result;
+}
+
+	document.getElementById("main").innerHTML = output;
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="AJAX Example 1">
+	<title>CIT 261 - AJAX requesting a JSON file</title>
+</head>
+<body>
+	<h1>AJAX Example 1 - requesting a JSON file</h1>
+	<main id="main">
+		Requesting current temperature information using XMLHttpRequest, parsing response, and updating page with received info:<br><br> 
+		<div id="location"></div> <br>
+		<div id="temp"></div> <br>
+	</main>
+</body>
+
+<script>
+var WeatherRequest = new XMLHttpRequest();
+// Use on apiURL for local testing and the other for when hosted on github
+//var apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=5346827&APPID=dd14403260f2bc5da5d473915847cf4f&units=imperial';
+var apiURL = '//api.openweathermap.org/data/2.5/weather?id=5346827&APPID=dd14403260f2bc5da5d473915847cf4f&units=imperial';
+
+WeatherRequest.open('GET', apiURL, true);
+WeatherRequest.send();
+
+WeatherRequest.onload = function () {
+    var weatherData = JSON.parse(WeatherRequest.responseText);
+    //console.log(weatherData);
+
+	document.getElementById('location').innerHTML = "<b>Location: </b>" + weatherData.name;
+    document.getElementById('temp').innerHTML = "<b>Current Temp: </b>" + weatherData.main.temp + " F";
+} 
+	
+</script>
+</html>

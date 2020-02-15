@@ -1,0 +1,105 @@
+body {
+    background-color: #506e55;
+    font-family: 'Open Sans', serif;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Francois One';
+}
+
+h2 {
+    font-family: 'Francois One';
+}
+
+header {
+    background-color: #12394f;
+    color: #e0e0e0;
+    text-align: center;
+    margin: 0;
+}
+
+header h1 {
+    font-family: 'Pacifico';
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.navSep {
+    display: none;
+}
+
+nav {
+    font-family: 'Pacifico';
+    background-color: #afbcbb;
+}
+
+nav button {
+    margin: 1% 0 1% 2%;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    border: 1px solid #84aab7;
+}
+
+nav ul li a {
+    display: block;
+    color: #12394f;
+    font-size: 2rem;
+    padding: 4px 0;
+}
+
+nav ul li a:link {
+    background-color: #afbcbb;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #12394f;
+    color:  white;
+}
+
+nav ul li a:active {
+    background-color: white;
+    background-color: #84aab7;
+    color: #afbcbb;
+}
+
+.active {
+    background-color: #548bb0;
+}
+
+main {
+    padding: 2%;
+}
+
+footer {
+    background-color: #12394f;
+    color: #afbcbb;
+    padding: 2%;
+}
+
+#copyright {
+    font-size: .6rem;
+    color: white;
+}

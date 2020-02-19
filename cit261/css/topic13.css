@@ -1,0 +1,40 @@
+#animOne {
+  height: 350px;
+  position: relative;
+  animation-name: animOne;
+  animation-duration: 20s;
+}
+
+#animOne img {
+	max-width: 100px;
+	height: auto;
+}
+
+@keyframes animOne {
+  0%   {left:0px; top:0px;}
+  25%  {left:250px; top:0px;}
+  50%  {left:250px; top:250px;}
+  75%  {left:0px; top:250px;}
+  100% {left:0px; top:0px;}
+}
+
+#animTwo img {
+	max-width: 100px;
+	height: auto;
+}
+
+#animTwo {
+  height: 400px;
+  position: relative;
+  animation-name: animTwo;
+  animation-duration: 20s;
+}
+
+@keyframes animTwo {
+  0%   {left:150px; top:0px;}
+  20%  {left:25px; top:300px;}
+  40%  {left:300px; top:150px;}
+  60%  {left:0px; top:150px;}
+  80%  {left:275px; top:300px;}
+  100% {left:150px; top:0px;}
+}

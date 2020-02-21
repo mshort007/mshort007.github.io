@@ -28,6 +28,8 @@
   position: relative;
   animation-name: animTwo;
   animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
 
 @keyframes animTwo {

@@ -40,3 +40,22 @@
   80%  {left:275px; top:300px;}
   100% {left:150px; top:0px;}
 }
+
+#animThree {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: animThree;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animThree {
+  0%   {background-color:red; width:100px;}
+  25%  {background-color:orange; width:175px;}
+  50%  {background-color:yellow; width:250px;}
+  75%  {background-color:green; width:325px;}
+  100%  {background-color:blue; width:400px;}
+}

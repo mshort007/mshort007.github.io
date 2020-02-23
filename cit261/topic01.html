@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic01.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,7 +19,122 @@
 		<h1>Topic 1</h1>
 		<h2>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
 		
+		<h3>Loops Example 1: for</h3>
+		<div id="loop1">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var x, y;<br><br>
+			for (x = y = 0; x < 10; x++) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspy += x;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "x is [" + x + "], y is [" + y + "]&lt;br&gt;";<br>
+			}<br>
+			output += "&lt;br&gt;Final Value for y is [" + y + "]&lt;br&gt;";<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="loop1Output">Press Run to Execute Code</p>
+			<button onclick="runLoop1()">Run</button>
+			<button onclick="clearLoop1()">Clear</button>
+		</div>
 		
+		<h3>Loops Example 2: for in</h3>
+		<div id="loop2">
+			<u>Code:</u>
+			<p class="code">
+				var output = "";<br>
+				var vehicle = { year:1996, make:"Ford", model:"Escort", trim:"LXW", color:"Royal Blue", VIN:"1FRD1X498A23GG48SW", inventoryTag:"17XJ4A"};<br><br>
+				for (var x in vehicle) {<br>
+				&nbsp&nbsp&nbsp&nbsp&nbspoutput += vehicle[x] + "&lt;br&gt;";<br>
+				}<br>	
+			</p>
+			<u>Output:</u>
+			<p class="output" id="loop2Output">Press Run to Execute Code</p>
+			<button onclick="runLoop2()">Run</button>
+			<button onclick="clearLoop2()">Clear</button>	
+		</div>
+		
+		<h3>Loops Example 3: for of</h3>
+		<div id="loop3">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var friends = [ 'Mike', 'Maithe', 'Michael', 'Ian', 'Mia', 'Linda', 'Jacob', 'Keith' ];<br><br>
+			for (var x of friends) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += x + "&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="loop3Output">Press Run to Execute Code</p>
+			<button onclick="runLoop3()">Run</button>
+			<button onclick="clearLoop3()">Clear</button>			
+		</div>
+		
+		<h3>Loops Example 4: while</h3>
+		<div id="loop4">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var x, y;<br>
+			x = y = 0;<br><br>
+			while (x < 10) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspy += x;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "x is [" + x + "], y is [" + y + "]&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspx++;<br>
+			}<br><br>
+			output += "&lt;br&gt;Final Value for y is [" + y + "]&lt;br&gt;";<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="loop4Output">Press Run to Execute Code</p>
+			<button onclick="runLoop4()">Run</button>
+			<button onclick="clearLoop4()">Clear</button>		
+		</div>
+		
+		<h3>Loops Example 5: do while</h3>
+		<div id="loop5">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var x, y;<br>
+			x = y = 0;<br><br>
+			do {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspy += x;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "x is [" + x + "], y is [" + y + "]&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspx++;<br>
+			} while (x < 10);<br><br>
+			output += "&lt;br&gt;Final Value for y is [" + y + "]&lt;br&gt;";<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="loop5Output">Press Run to Execute Code</p>
+			<button onclick="runLoop5()">Run</button>
+			<button onclick="clearLoop5()">Clear</button>		
+		</div>
+		
+		<h3>Conditions Example 1</h3>
+		<div id="condition1"></div>
+		
+		<h3>Conditions Example 2</h3>
+		<div id="condition2"></div>
+
+		<h3>Conditions Example 3</h3>
+		<div id="condition3"></div>
+		
+		<h3>Conditions Example 4</h3>
+		<div id="condition4"></div>
+		
+		<h3>Functions Example 1</h3>
+		<div id="function1"></div>
+
+		<h3>Variables Example 1</h3>
+		<div id="variables1"></div>
+		
+		<h3>Parameters Example 1</h3>
+		<div id="parameters1"></div>		
+		
+		<h3>Arrays Example 1</h3>
+		<div id="array1"></div>
+		
+		<h3>Associative Arrays Example 1</h3>
+		<div id="associative1"></div>
 		
 	</main>
 	

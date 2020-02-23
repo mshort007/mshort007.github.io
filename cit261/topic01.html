@@ -109,17 +109,103 @@
 			<button onclick="clearLoop5()">Clear</button>		
 		</div>
 		
-		<h3>Conditions Example 1</h3>
-		<div id="condition1"></div>
+		<h3>Conditional Statements Example 1: if</h3>
+		<div id="conditional1">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var num = Math.floor(Math.random() * 11);<br><br>
+			output = "Random Number from 0 to 10: [" + num + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			if (num > 5) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is Larger than 5!&lt;br&gt;";<br>
+			}<br>
+			if (num < 5) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is Smaller than 5!&lt;br&gt;";<br>
+			}<br>
+			if (num == 5) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is 5!&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="conditional1Output">Press Run to Execute Code</p>
+			<button onclick="runConditional1()">Run</button>
+			<button onclick="clearConditional1()">Clear</button>			
+		</div>
 		
-		<h3>Conditions Example 2</h3>
-		<div id="condition2"></div>
+		<h3>Conditional Statements Example 2: else</h3>
+		<div id="conditional2">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var num = Math.floor(Math.random() * 11);<br><br>
+			output = "Random Number from 0 to 10: [" + num + "]&lt;br&gt;&lt;br&gt;Key:  0-4 = Happy, 5-10 = Sad&lt;br&gt;&lt;br&gt;Message:&lt;br&gt;";<br><br>
+			if (num < 5) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "I Feel Happy!&lt;br&gt;";<br>
+			} else {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "I Feel Sad!&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="conditional2Output">Press Run to Execute Code</p>
+			<button onclick="runConditional2()">Run</button>
+			<button onclick="clearConditional2()">Clear</button>
+		</div>
 
-		<h3>Conditions Example 3</h3>
-		<div id="condition3"></div>
+		<h3>Conditional Statements Example 3: if else</h3>
+		<div id="conditional3">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var num = Math.floor(Math.random() * 11);<br><br>
+			output = "Random Number from 0 to 10: [" + num + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			if (num > 5) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is Larger than 5!&lt;br&gt;";<br>
+			} else if (num < 5) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is Smaller than 5!&lt;br&gt;";<br>
+			} else {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is 5!&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="conditional3Output">Press Run to Execute Code</p>
+			<button onclick="runConditional3()">Run</button>
+			<button onclick="clearConditional3()">Clear</button>
+		</div>
 		
-		<h3>Conditions Example 4</h3>
-		<div id="condition4"></div>
+		<h3>Conditional Statements Example 4: switch</h3>
+		<div id="conditional4">
+			<u>Code:</u>
+			<p class="code">
+			var output = "";<br>
+			var num = Math.floor(Math.random() * 11);<br><br>
+			output = "Random Number from 0 to 10: [" + num + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			switch (num) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 0:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 1:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 2:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 3:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 4:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is Smaller than 5!&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 5:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is 5!&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 6:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 7:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 8:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 9:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspcase 10:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Random Number is Larger than 5!&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspdefault:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Error: It should not be possible to ever get this message.&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="conditional4Output">Press Run to Execute Code</p>
+			<button onclick="runConditional4()">Run</button>
+			<button onclick="clearConditional4()">Clear</button>
+		</div>
 		
 		<h3>Functions Example 1</h3>
 		<div id="function1"></div>

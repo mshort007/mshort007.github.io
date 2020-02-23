@@ -83,7 +83,103 @@ function clearLoop5() {
 	document.getElementById("loop5Output").innerHTML = "Press Run to Execute Code";
 }
 
+function runConditional1() {
+	var output = "";
+	var num = Math.floor(Math.random() * 11);
 
+	output = "Random Number from 0 to 10: [" + num + "]<br><br>";
+	
+	if (num > 5) {
+		output += "Random Number is Larger than 5!<br>";
+	}
+	if (num < 5) {
+		output += "Random Number is Smaller than 5!<br>";
+	}
+	if (num == 5) {
+		output += "Random Number is 5!<br>";
+	}
+	
+	document.getElementById("conditional1Output").innerHTML = output;	
+}
+
+function clearConditional1() {
+	document.getElementById("conditional1Output").innerHTML = "Press Run to Execute Code";	
+}
+
+function runConditional2() {
+	var output = "";
+	var num = Math.floor(Math.random() * 11);
+
+	output = "Random Number from 0 to 10: [" + num + "]<br><br>Key:  0-4 = Happy, 5-10 = Sad<br><br>Message:<br>";
+	
+	if (num < 5) {
+		output += "I Feel Happy!<br>";
+	} else {
+		output += "I Feel Sad!<br>";
+	}
+
+	document.getElementById("conditional2Output").innerHTML = output;
+}
+
+function clearConditional2() {
+	document.getElementById("conditional2Output").innerHTML = "Press Run to Execute Code";	
+}
+
+function runConditional3() {
+	var output = "";
+	var num = Math.floor(Math.random() * 11);
+
+	output = "Random Number from 0 to 10: [" + num + "]<br><br>";
+	
+	if (num > 5) {
+		output += "Random Number is Larger than 5!<br>";
+	} else if (num < 5) {
+		output += "Random Number is Smaller than 5!<br>";
+	} else {
+		output += "Random Number is 5!<br>";
+	}
+	
+	document.getElementById("conditional3Output").innerHTML = output;	
+}
+
+function clearConditional3() {
+	document.getElementById("conditional3Output").innerHTML = "Press Run to Execute Code";	
+}
+
+function runConditional4() {
+	var output = "";
+	var num = Math.floor(Math.random() * 11);
+
+	output = "Random Number from 0 to 10: [" + num + "]<br><br>";
+	
+	switch (num) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+			output += "Random Number is Smaller than 5!<br>";
+			break;
+		case 5:
+			output += "Random Number is 5!<br>";
+			break;
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+			output += "Random Number is Larger than 5!<br>";
+			break;
+		default:
+			output += "Error: It should not be possible to ever get this message.<br>";
+	}
+	
+	document.getElementById("conditional4Output").innerHTML = output;	
+}
+
+function clearConditional4() {
+	document.getElementById("conditional4Output").innerHTML = "Press Run to Execute Code";	
+}
 
 function isArray(a_array) {
 	var result = "false";

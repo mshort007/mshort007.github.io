@@ -181,6 +181,135 @@ function clearConditional4() {
 	document.getElementById("conditional4Output").innerHTML = "Press Run to Execute Code";	
 }
 
+function getWeekday(day) {
+	var result = "";
+	switch (day) {
+		case 0:
+			result = "Sunday";
+			break;
+		case 1:
+			result = "Monday";
+			break;
+		case 2:
+			result = "Tuesday";
+			break;
+		case 3:
+			result = "Wednesday";
+			break;
+		case 4:
+			result = "Thursday";
+			break;
+		case 5:
+			result = "Friday";
+			break;
+		case 6:
+			result = "Saturday";
+			break;
+		default:
+			result = "Error: Unable to determine day!";
+			break;
+	}
+	return result;
+}
+
+function getWisdom() {
+	var num = Math.floor(Math.random() * 11);
+	var wisdom = "";
+	
+	switch (num) {
+		case 0:
+			wisdom = "A little impatience will spoil great plans.";
+			break;
+		case 1:
+			wisdom = "A journey of a thousand miles begins with a single step."
+			break;
+		case 2:
+			wisdom = "The more acquaintances you have, the less you know them.";
+			break;
+		case 3:
+			wisdom = "Two good talkers are not worth one good listener.";
+			break;
+		case 4:
+			wisdom = "Patience is a bitter plant, but its fruit is sweet.";
+			break;
+		case 5:
+			wisdom = "The best time to plant a tree was 20 years ago. The second best time is today.";
+			break;
+		case 6:
+			wisdom = "A hundred no's are less agonizing than one insincere yes.";
+			break;
+		case 7:
+			wisdom = "He who asks is a fool for five minutes, but he who does not ask remains a fool forever.";
+			break;
+		case 8:
+			wisdom = "A man who cannot tolerate small misfortunes can never accomplish great things.";
+			break;
+		case 9:
+			wisdom = "Genius can be recognized by its childish simplicity.";
+			break;
+		case 10:
+			wisdom = "All things change, and we change with them.";
+			break;
+		default:
+			wisdom = "Error: Something went wrong while seeking wisdom!";
+			break;
+	}
+	return wisdom;
+}	
+
+function runFunction1() {
+	var output = "";
+	output += "Happy " + getWeekday(new Date().getDay()) + "!<br><br>";
+	output += "Your Wisdom for Today is: <br><br><i>" + getWisdom() + "</i><br>";
+	document.getElementById("function1Output").innerHTML = output;
+}
+
+function clearFunction1() {
+	document.getElementById("function1Output").innerHTML = "Press Get Wisdom to Execute Code";
+}
+
+function runParameter1() {
+	var output = "";
+	var greetingMsg = "Hi!";
+	
+	output += "Current Greeting: " + greetingMsg + "<br><br>";
+	// attempt to set to something invalid
+	setGreeting(123);
+	output += "Current Greeting: " + greetingMsg + "<br><br>";
+	// attempt to set to something valid
+	setGreeting("Hello Parameter Seekers!");
+	output += "Current Greeting: " + greetingMsg + "<br><br>";
+
+	var x = 1, y = 2, z = 3;
+	
+	output += "Perform addition by passing parameters to an addition function:<br><br>";
+	output += x + " + " + y + " = " + addNumbers(x,y) + "<br><br>";
+	output += y + " + " + z + " = " + addNumbers(y,z) + "<br><br>";
+	output += z + " + " + x + " = " + addNumbers(z,x) + "<br><br>";
+	
+	document.getElementById("parameter1Output").innerHTML = output;
+}
+
+function clearFunction1() {
+	document.getElementById("parameter1Output").innerHTML = "Press Run to Execute Code";	
+}
+	
+function setGreeting(a_strGreeting) {
+	// Check if the value passed into the function was a string before setting
+	if (typeof a_strGreeting === 'string') {
+		greetingMsg = a_strGreeting;
+	}
+}
+
+function addNumbers(a_val1, a_val2) {
+	var result;
+	
+	result = a_val1 + a_val2;
+	
+	return result;
+}
+
+
 function isArray(a_array) {
 	var result = "false";
 	

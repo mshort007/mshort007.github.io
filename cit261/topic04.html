@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic04.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,8 +19,12 @@
 		<h1>Topic 4</h1>
 		<h2>AJAX requesting a JSON file</h2>
 		
-		
-		
+		Request current temperature information using XMLHttpRequest, parse response, and update page with received info:<br><br> 
+		<div id="location"></div><br>
+		<div id="temp"></div><br>
+		<p class="output" id="info1Output">Press Get Info to Execute XMLHttpRequest to obtain JSON data</p>
+		<button onclick="getInfo1()">Get Info</button>
+		<button onclick="clearInfo1()">Clear</button>
 	</main>
 	
 	<footer includefile="footer.html"></footer>

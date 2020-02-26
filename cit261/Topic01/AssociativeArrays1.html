@@ -13,24 +13,19 @@
 	</main>
 </body>
 <script>
-	var output = "";
-	var myFamily = [ "Dad", "Mom", "Michael", "Ian", "Mia", "Linda", "Jacob", "Keith" ];
-	var myFamilyObj = { father:"Dad", mother:"Mom", child1:"Michael", child2:"Ian", child3:"Mia", child4:"Linda", child5:"Jacob", child6:"Keith" };
-	var i;
-
-	output += "myFamily is: [" + getType(myFamily) + "]<br><br>";
-	output += "myFamily length is: [" + myFamily.length + "]<br><br>";
-	output += "myFamily keys: [" + Object.keys(myFamily) + "]<br><br>";
+	let output = "";
+	let myFamilyObj = { father:"Dad", mother:"Mom", child1:"Jack", child2:"Fred", child3:"Hannah", child4:"Jake", child5:"Ralph", child6:"Laura" };
+	let i = 0;
 
 	output += "myFamilyObj is: [" + getType(myFamilyObj) + "]<br><br>";		
 	output += "myFamilyObj length is: [" + myFamilyObj.length + "]<br><br>";
 	output += "myFamily Obj keys: [" + Object.keys(myFamilyObj) + "]<br><br>";
 	
-	myFamily["namedIndex1"] = "NamedI1";
-	myFamily["namedIndex2"] = "NamedI2";
-	output += "myFamily is: [" + getType(myFamily) + "]<br><br>";
-	output += "myFamily length is: [" + myFamily.length + "]<br><br>";
-	output += "myFamily keys: [" + Object.keys(myFamily) + "]<br><br>";
+//	myFamily["namedIndex1"] = "NamedI1";
+//	myFamily["namedIndex2"] = "NamedI2";
+//	output += "myFamily is: [" + getType(myFamily) + "]<br><br>";
+//	output += "myFamily length is: [" + myFamily.length + "]<br><br>";
+//	output += "myFamily keys: [" + Object.keys(myFamily) + "]<br><br>";
 	
 	
 //	output += "myFamily is an array? [" + isArray(myFamily) + "]<br><br>";

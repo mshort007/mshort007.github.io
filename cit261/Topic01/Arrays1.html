@@ -14,16 +14,16 @@
 </body>
 <script>
 	var output = "";
-	var myFamily = [ "Dad", "Mom", "Michael", "Ian", "Mia", "Linda", "Jacob", "Keith" ];
+	var myFriends = [ "Dad", "Mom", "Michael", "Ian", "Mia", "Linda", "Jacob", "Keith" ];
 	var i;
 	
-	output += "myFamily is an array? [" + isArray(myFamily) + "]<br><br>";
+	output += "myFriends is an array? [" + isArray(myFriends) + "]<br><br>";
 	
-	output += "The array myFamily contains [" + myFamily.length + "] elements.<br><br>";
+	output += "The array myFriends contains [" + myFriends.length + "] elements.<br><br>";
 	
-	output += "Contents of myFamily:<br><br>";
-	for (i = 0; i < myFamily.length; i++) {
-		output += "myFamily[" + i + "]: [" + myFamily[i] + "]<br>";
+	output += "Contents of myFriends:<br><br>";
+	for (i = 0; i < myFriends.length; i++) {
+		output += "myFriends[" + i + "]: [" + myFriends[i] + "]<br>";
 	}
 	
 	document.getElementById("main").innerHTML = output;

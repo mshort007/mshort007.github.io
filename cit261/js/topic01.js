@@ -268,9 +268,10 @@ function clearFunction1() {
 	document.getElementById("function1Output").innerHTML = "Press Get Wisdom to Execute Code";
 }
 
+var greetingMsg = "Hi!";
 function runParameter1() {
+	greetingMsg = "Hi!";
 	var output = "";
-	var greetingMsg = "Hi!";
 	
 	output += "Current Greeting: " + greetingMsg + "<br><br>";
 	// attempt to set to something invalid
@@ -290,7 +291,7 @@ function runParameter1() {
 	document.getElementById("parameter1Output").innerHTML = output;
 }
 
-function clearFunction1() {
+function clearParameter1() {
 	document.getElementById("parameter1Output").innerHTML = "Press Run to Execute Code";	
 }
 	
@@ -309,13 +310,72 @@ function addNumbers(a_val1, a_val2) {
 	return result;
 }
 
+function runArray1() {
+	let output = "";
+	let myFriends = [ "Michael", "Maithe", "Mike", "Ian", "Mia", "Linda", "Jacob", "Keith" ];
+
+	
+	output += "myFriends is an array? [" + isArray(myFriends) + "]<br><br>";
+	
+	output += "The array myFriends contains [" + myFriends.length + "] elements.<br><br>";
+	
+	output += "Contents of myFriends:<br><br>";
+	for (let i = 0; i < myFriends.length; i++) {
+		output += "myFriends[" + i + "]: [" + myFriends[i] + "]<br>";
+	}
+	
+	document.getElementById("array1Output").innerHTML = output;
+}
+
+function clearArray1() {
+	document.getElementById("array1Output").innerHTML = "Press Run to Execute Code";	
+}
 
 function isArray(a_array) {
-	var result = "false";
+	let result = "false";
 	
 	if (a_array.constructor.toString().indexOf("Array") > -1) {
 		result = "true";
 	}
-	
 	return result;
 }
+
+function runAssocArray1() {
+	let output = "";
+	let myFamilyObj = { father:"Dad", mother:"Mom", child1:"Jack", child2:"Fred", child3:"Hannah", child4:"Jake", child5:"Ralph", child6:"Laura" };
+	let i = 0;
+
+	output += "myFamilyObj is: [" + getType(myFamilyObj) + "]<br><br>";		
+	output += "myFamilyObj length is: [" + myFamilyObj.length + "]<br><br>";
+	output += "myFamily Obj keys: [" + Object.keys(myFamilyObj) + "]<br><br>";
+	
+//	myFamily["namedIndex1"] = "NamedI1";
+//	myFamily["namedIndex2"] = "NamedI2";
+//	output += "myFamily is: [" + getType(myFamily) + "]<br><br>";
+//	output += "myFamily length is: [" + myFamily.length + "]<br><br>";
+//	output += "myFamily keys: [" + Object.keys(myFamily) + "]<br><br>";
+	
+	for (let n in myFamilyObj) {
+		output += "myFamilyObj[" + n + "] = [" + myFamilyObj[n] + "]<br>";
+		
+	}
+//	output += "myFamily is an array? [" + isArray(myFamily) + "]<br><br>";
+//	
+//	output += "The array myFamily contains [" + myFamily.length + "] elements.<br><br>";
+//	
+//	output += "Contents of myFamily:<br><br>";
+//	for (i = 0; i < myFamily.length; i++) {
+//		output += "myFamily[" + i + "]: [" + myFamily[i] + "]<br>";
+//	}
+	
+	document.getElementById("assocArray1Output").innerHTML = output;
+}
+
+function clearAssocArray1() {
+	document.getElementById("assocArray1Output").innerHTML = "Press Run to Execute Code";	
+}
+
+function getType(a_variable) {
+	return typeof a_variable;
+}
+

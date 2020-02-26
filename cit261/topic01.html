@@ -295,18 +295,88 @@
 			<button onclick="clearFunction1()">Clear</button>
 		</div>
 
-		<h3>Variables Example 1</h3>
+		<h3>Variables Example</h3>
 		<div id="variables1"></div>
 		
-		<h3>Parameters Example 1</h3>
-		<div id="parameters1"></div>		
+		<h3>Parameters Example</h3>
+		<div id="parameters1">
+			<u>Code:</u>
+			<p class="code">
+			var greetingMsg = "Hi!";<br><br>
+			var output = "";<br><br>
+			output += "Current Greeting: " + greetingMsg + "&lt;br&gt;";<br>
+			// attempt to set to something invalid<br>
+			setGreeting(123);<br>
+			output += "Current Greeting: " + greetingMsg + "&lt;br&gt;";<br>
+			// attempt to set to something valid<br>
+			setGreeting("Hello Parameter Seekers!");<br>
+			output += "Current Greeting: " + greetingMsg + "&lt;br&gt;";<br><br>
+			var x = 1, y = 2, z = 3;<br><br>
+			output += "Perform addition by passing parameters to an addition function:&lt;br&gt;";<br>
+			output += x + " + " + y + " = " + addNumbers(x,y) + "&lt;br&gt;";<br>
+			output += y + " + " + z + " = " + addNumbers(y,z) + "&lt;br&gt;";<br>
+			output += z + " + " + x + " = " + addNumbers(z,x) + "&lt;br&gt;";<br><br><br>
+			function setGreeting(a_strGreeting) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Check if the value passed into the function was a string before setting<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspif (typeof a_strGreeting === 'string') {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspgreetingMsg = a_strGreeting;<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+			}<br><br>
+			function addNumbers(a_val1, a_val2) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspvar result;<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspresult = a_val1 + a_val2;<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspreturn result;<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="parameter1Output">Press Run to Execute Code</p>
+			<button onclick="runParameter1()">Run</button>
+			<button onclick="clearParameter1()">Clear</button>
+		</div>		
 		
-		<h3>Arrays Example 1</h3>
+		<h3>Arrays Example</h3>
 		<div id="array1"></div>
+			<u>Code:</u>
+			<p class="code">
+			let output = "";<br>
+			let myFriends = [ "Michael", "Maithe", "Mike", "Ian", "Mia", "Linda", "Jacob", "Keith" ];<br><br>
+			output += "myFriends is an array? [" + isArray(myFriends) + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			output += "The array myFriends contains [" + myFriends.length + "] elements.&lt;br&gt;&lt;br&gt;";<br><br>
+			output += "Contents of myFriends:&lt;br&gt;&lt;br&gt;";<br>
+			for (let i = 0; i < myFriends.length; i++) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "myFriends[" + i + "]: [" + myFriends[i] + "]&lt;br&gt;";<br>
+			}<br><br>
+			function isArray(a_array) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet result = "false";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspif (a_array.constructor.toString().indexOf("Array") > -1) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspresult = "true";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspreturn result;<br>
+			}<br>
+			</p>
+			<u>Output:</u>		
+			<p class="output" id="array1Output">Press Run to Execute Code</p>
+			<button onclick="runArray1()">Run</button>
+			<button onclick="clearArray1()">Clear</button>
 		
-		<h3>Associative Arrays Example 1</h3>
+		<h3>Associative Arrays Example</h3>
 		<div id="associative1"></div>
-		
+			<u>Code:</u>
+			<p class="code">
+			let output = "";<br>
+			let myFamilyObj = { father:"Dad", mother:"Mom", child1:"Jack", child2:"Fred", child3:"Hannah", child4:"Jake", child5:"Ralph", child6:"Laura" };<br>
+			let i = 0;<br><br>
+			output += "myFamilyObj is: [" + getType(myFamilyObj) + "]&lt;br&gt;&lt;br&gt;";<br>	
+			output += "myFamilyObj length is: [" + myFamilyObj.length + "]&lt;br&gt;&lt;br&gt;";<br>
+			output += "myFamily Obj keys: [" + Object.keys(myFamilyObj) + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			for (let n in myFamilyObj) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "myFamilyObj[" + n + "] = [" + myFamilyObj[n] + "]&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>		
+			<p class="output" id="assocArray1Output">Press Run to Execute Code</p>
+			<button onclick="runAssocArray1()">Run</button>
+			<button onclick="clearAssocArray1()">Clear</button>
 	</main>
 	
 	<footer includefile="footer.html"></footer>

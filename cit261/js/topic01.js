@@ -268,6 +268,31 @@ function clearFunction1() {
 	document.getElementById("function1Output").innerHTML = "Press Get Wisdom to Execute Code";
 }
 
+function runVariables() {
+	let output = "";
+	let facts = "Variables can hold values and strings! They give us a way to define and reference objects containing different types of data that can be stored and manipulated.";
+	let x, y, z;
+	x = 3; y = 9; z = 0;
+
+	output += "Here is a fact about variables:<br><br>" + facts + "<br><br>";
+	
+	output += "x is [" + x + "]<br>";
+	output += "y is [" + y + "]<br>";
+	output += "z is [" + z + "]<br><br>";
+	
+	output += "Values stored in variables can be used in mathematical equations:<br><br>"; 
+	
+	output += "z + y = [" + (z + y) + "]<br>";
+	output += "x + y = [" + (x + y) + "]<br>";
+	output += "y * x = [" + (y * x) + "]<br><br>";
+
+	document.getElementById("variablesOutput").innerHTML = output;
+}
+
+function clearVariables() {
+	document.getElementById("variablesOutput").innerHTML = "Press Run to Execute Code";
+}
+
 var greetingMsg = "Hi!";
 function runParameter1() {
 	greetingMsg = "Hi!";
@@ -349,24 +374,10 @@ function runAssocArray1() {
 	output += "myFamilyObj length is: [" + myFamilyObj.length + "]<br><br>";
 	output += "myFamily Obj keys: [" + Object.keys(myFamilyObj) + "]<br><br>";
 	
-//	myFamily["namedIndex1"] = "NamedI1";
-//	myFamily["namedIndex2"] = "NamedI2";
-//	output += "myFamily is: [" + getType(myFamily) + "]<br><br>";
-//	output += "myFamily length is: [" + myFamily.length + "]<br><br>";
-//	output += "myFamily keys: [" + Object.keys(myFamily) + "]<br><br>";
-	
 	for (let n in myFamilyObj) {
 		output += "myFamilyObj[" + n + "] = [" + myFamilyObj[n] + "]<br>";
 		
 	}
-//	output += "myFamily is an array? [" + isArray(myFamily) + "]<br><br>";
-//	
-//	output += "The array myFamily contains [" + myFamily.length + "] elements.<br><br>";
-//	
-//	output += "Contents of myFamily:<br><br>";
-//	for (i = 0; i < myFamily.length; i++) {
-//		output += "myFamily[" + i + "]: [" + myFamily[i] + "]<br>";
-//	}
 	
 	document.getElementById("assocArray1Output").innerHTML = output;
 }

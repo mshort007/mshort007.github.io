@@ -207,8 +207,8 @@
 			<button onclick="clearConditional4()">Clear</button>
 		</div>
 		
-		<h3>Functions Example 1: getWeekday() and getWisdom()</h3>
-		<div id="function1">
+		<h3>Functions Example: getWeekday() and getWisdom()</h3>
+		<div id="function">
 			<u>Code:</u>
 			<p class="code">
 			var output = "";<br>
@@ -296,10 +296,30 @@
 		</div>
 
 		<h3>Variables Example</h3>
-		<div id="variables1"></div>
+		<div id="variables">
+			<u>Code:</u>
+			<p class="code">
+			let output = "";<br>
+			let facts = "Variables can hold values and strings! They give us a way to define and reference objects containing different types of data that can be stored and manipulated.";<br>
+			let x, y, z;<br>
+			x = 3; y = 9; z = 0;<br><br>
+			output += "Here is a fact about variables:&lt;br&gt;&lt;br&gt;" + facts + "&lt;br&gt;&lt;br&gt;";<br><br>
+			output += "x is [" + x + "]&lt;br&gt;";<br>
+			output += "y is [" + y + "]&lt;br&gt;";<br>
+			output += "z is [" + z + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			output += "Values stored in variables can be used in mathematical equations:&lt;br&gt;&lt;br&gt;";<br><br>
+			output += "z + y = [" + (z + y) + "]&lt;br&gt;";<br>
+			output += "x + y = [" + (x + y) + "]&lt;br&gt;";<br>
+			output += "y * x = [" + (y * x) + "]&lt;br&gt;&lt;br&gt;";<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="variablesOutput">Press Run to Execute Code</p>
+			<button onclick="runVariables()">Run</button>
+			<button onclick="clearVariables()">Clear</button>
+		</div>
 		
 		<h3>Parameters Example</h3>
-		<div id="parameters1">
+		<div id="parameters">
 			<u>Code:</u>
 			<p class="code">
 			var greetingMsg = "Hi!";<br><br>
@@ -335,7 +355,7 @@
 		</div>		
 		
 		<h3>Arrays Example</h3>
-		<div id="array1"></div>
+		<div id="array"></div>
 			<u>Code:</u>
 			<p class="code">
 			let output = "";<br>
@@ -360,7 +380,7 @@
 			<button onclick="clearArray1()">Clear</button>
 		
 		<h3>Associative Arrays Example</h3>
-		<div id="associative1"></div>
+		<div id="associative"></div>
 			<u>Code:</u>
 			<p class="code">
 			let output = "";<br>

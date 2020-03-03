@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic03.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,13 +19,27 @@
 		<h1>Topic 3</h1>
 		<h2>JSON Parse, Stringify</h2>
 	
-	<h2>JSON Parse</h2>
-	Raw JSON String:<div id="rawString"></div><br><br>
-	Parsed Values:<div id="parsedString"></div><br><br>
-
-	<h2>JSON Stringify</h2>
-	Object Contents:<div id="rawObject"></div><br><br>
-	Stringified Object Text:<div id="stringifiedObject"></div><br><br>
+		<div id="jsonparse">
+			<h3>Parse JSON String into an Object</h3>
+			Raw JSON String:
+			<p class="code" id="rawString"></p>
+			<br>
+			Output of Object Contents:
+			<p class="output" id="parsedString"></p>
+			<button onclick="parseString()">Parse</button>
+			<button onclick="clearParse()">Clear</button>
+		</div>
+		<br>
+			<div id="stringify">		
+			<h3>Convert Object onto JSON String</h3>
+			Object Contents:
+			<p class="code" id="rawObject"></p>
+			<br>
+			Stringified Object Text:
+			<p class="output" id="stringifiedObject"></p>
+			<button onclick="stringifyObject()">Stringify</button>
+			<button onclick="clearStringify()">Clear</button>
+		</div>
 
 	</main>
 	<footer includefile="footer.html"></footer>

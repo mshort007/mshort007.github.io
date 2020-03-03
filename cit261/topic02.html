@@ -17,7 +17,55 @@
 	<main id="main">
 		<h1>Topic 2</h1>
 		<h2>JavaScript Objects - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
-		
+
+		<div id="person">
+			<h3>Person (Base Class)<h3>
+			<label for="firstName">First Name:</label><br>
+			<input type="text" id="firstName" name="firstName" value=""><br>
+			<label for="lastName">Last name:</label><br>
+			<input type="text" id="lastName" name="lastName" value=""><br>
+			<label for="gender">Gender:</label><br>
+			<input type="text" id="gender" name="gender" value=""><br>
+			<label for="age">Age:</label><br>
+			<input type="text" id="age" name="age" value=""><br>
+			<button onclick="createPerson()">Create Person</button>
+			<button onclick="greetPerson()">Person Greeting</button>
+			<button onclick="reset()">Reset</button>
+			<br>Output:<br>
+			<p class="output" id="personOutput"></p>
+		</div>
+		<br>
+		<div id="voter">
+			<h3>Voter<h3>
+			<label for="state">State:</label><br>
+			<input type="text" id="state" name="state" value=""><br>
+			<label for="aDistrict">Assembly District:</label><br>
+			<input type="text" id="aDistrict" name="aDistrict" value=""><br>
+			<label for="sDistrict">Senate District:</label><br>
+			<input type="text" id="sDistrict" name="sDistrict" value=""><br>
+			<button onclick="createVoter()">Create Voter</button>
+			<button onclick="greetVoter()">Voter Greeting</button>
+			<button onclick="prefillVoter()">Prefill Voter</button>
+			<br>Output:<br>
+			<p class="output" id="voterOutput"></p>
+		</div>
+		<br>
+		<div id="candidate">
+			<h3>Candidate<h3>
+			<label for="cState">State:</label><br>
+			<input type="text" id="cState" name="cState" value=""><br>
+			<label for="representaion">Representation:</label><br>
+			<input type="text" id="representation" name="representation" value=""><br>
+			<label for="district">District:</label><br>
+			<input type="text" id="district" name="district" value=""><br>
+			<label for="party">Party Affiliation:</label><br>
+			<input type="text" id="party" name="party" value=""><br>
+			<button onclick="createCandidate()">Create Candidate</button>
+			<button onclick="greetCandidate()">Candidate Greeting</button>
+			<button onclick="prefillCandidate()">Prefill Candidate</button>
+			<br>Output:<br>
+			<p class="output" id="candidateOutput"></p>
+		</div>
 		
 		
 	</main>

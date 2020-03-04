@@ -20,11 +20,23 @@
 		<h2>AJAX requesting a JSON file</h2>
 		
 		Request current temperature information using XMLHttpRequest, parse response, and update page with received info:<br><br> 
-		<div id="location"></div><br>
-		<div id="temp"></div><br>
-		<p class="output" id="info1Output">Press Get Info to Execute XMLHttpRequest to obtain JSON data</p>
-		<button onclick="getInfo1()">Get Info</button>
-		<button onclick="clearInfo1()">Clear</button>
+		<p class="info" id="location"></p>
+		<p class="info" id="temp"></p>
+		<br>
+		<p class="output" id="infoOutput">Press Get Info to Execute XMLHttpRequest to obtain JSON data</p>
+		<label for="locations">Choose a Location:</label>
+		<br>
+		<select id="locations">
+			<option value="2988507">Paris, France</option>
+			<option value="5391959">San Francisco, CA</option>
+			<option value="5128638">New York, NY</option>
+			<option value="1816670">Beijing, China</option>
+			<option value="3451189">Rio de Janeiro, Brazil</option>
+			<option value="5346827" selected>Edcondido, CA</option>
+		</select>
+		<br><br>
+		<button onclick="getInfo()">Get Info</button>
+		<button onclick="clearInfo()">Clear</button>
 	</main>
 	
 	<footer includefile="footer.html"></footer>

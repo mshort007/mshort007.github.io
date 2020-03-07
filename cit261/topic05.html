@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic05.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -17,8 +18,174 @@
 	<main id="main">
 		<h1>Topic 5</h1>
 		<h2>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
+
+		<h3>Local Storage API Example 1 - Storing Data</h3>
+		<div id="localStorage1">
+			<u>Code:</u>
+			<p class="code">
+			let output = "";<br>
+			output += "localStorage supported: [" + localStorageSupported() + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			// Only Attempt if localStorage API is supported<br>
+			if (localStorageSupported()) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Simple Data<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet lastVisitDate = new Date().toString();<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Arrays<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet billingAddress = [];<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspbillingAddress[0] = "Michael Short";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspbillingAddress[1] = "123 Any Street"<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspbillingAddress[2] = "New York, NY, 10101"<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Associative Arrays<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet shippingAddress = [];<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['street1'] = "123 Any Street";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['city'] = "New York";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['state'] = "NY";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['postalCode'] = "10101";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Objects<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet shoppingCart = { item:"Baby Formula", size: "24 oz", qty:3 };<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// We have Data, lets Store it.<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Storing localStorage Data: &lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Storing a string<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   lastVisit&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.lastVisit = lastVisitDate;<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// This Array can be stringified and stored<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   billingAddress&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.billingAddress = JSON.stringify(billingAddress);<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// This Associative Array cannot be stringified and stored, each element must be stored individually<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// an attempt to stringify this array will result in an empty string<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   shippingAddress&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.SAstreet1 = JSON.stringify(shippingAddress['street1']);<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.SAcity = JSON.stringify(shippingAddress['city']);<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.SAstate = JSON.stringify(shippingAddress['state']);<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.SApostalCode = JSON.stringify(shippingAddress['postalCode']);<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// This Object can be stringified and stored<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   shoppingCart&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.shoppingCart = JSON.stringify(shoppingCart);<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;Storing sessionStorage Data: &lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// This is is how we only store something temporarily for this session.<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   tmpData&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspsessionStorage.tmpData = "This data will only be stored for the current session!";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Store temp data using the setItem method<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   tmpData2 (using setItem)&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspsessionStorage.setItem("tmpData2", "This data was stored with the setItem method!");<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;Done!&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="ls1Output"></p>
+			<button onclick="localStorage1()">Run</button>
+			<button onclick="clear1()">Clear</button>
+		</div>		
+
+
+		<h3>Local Storage API Example 2 - Retrieving Data</h3>
+		<div id="localStorage2">
+			<u>Code:</u>
+			<p class="code">
+			let output = "";<br>
+			output += "localStorage supported: [" + localStorageSupported() + "]&lt;br&gt;&lt;br&gt;";<br><br>
+			// Only Attempt if localStorage API is supported<br>
+			if (localStorageSupported()) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Lets get the data out.<br>	
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Retrieving Data: &lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Retrieve a String<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbsplastVisit&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet lastVisitDate = localStorage.lastVisit;<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Retrieve an Array<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbspbillingAddress&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet billingAddress = JSON.parse(localStorage.billingAddress);<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Retrieve an Associative Array<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Because an Associative Array will not store easily as an Array or Object<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// To reconstruct, each item must be separately retrieved and stored. <br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet shippingAddress = [];<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['street1'] = JSON.parse(localStorage.SAstreet1);<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['city'] = JSON.parse(localStorage.SAcity);<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['state'] = JSON.parse(localStorage.SAstate);<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress['postalCode'] = JSON.parse(localStorage.SApostalCode);<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Retrieve an Object<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbspshoppingCart&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet shoppingCart = Object(JSON.parse(localStorage.shoppingCart));<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Get sessionData<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbsptmpData&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet tmpData = sessionStorage.tmpData;<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Get ssessionData using getItem<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbsptmpData2&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplet tmpData2 = sessionStorage.getItem('tmpData2');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;Done!&lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display what we were able to retrieve<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "<b>Data Read:</b>&lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display the String<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "lastVisitDate: " + lastVisitDate + "&lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display the Array<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "billingAddress: &lt;br&gt;&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspfor (let x = 0; x < billingAddress.length; x++) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   billingAddress[" + x + "]:  " + billingAddress[x] + "&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display the Associative Array<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "shippingAddress: &lt;br&gt;&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspfor (let a in shippingAddress) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "  shippingAddress[" + a + "]: " + shippingAddress[a] + "&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display the object<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "shoppingCart: &lt;br&gt;&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspfor (let b in shoppingCart) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspoutput += "   shoppingCart " + b + ": " + shoppingCart[b] + "&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display tmpData<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "tmpData: " + tmpData + "&lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Display tmpData2<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "tmpData2: " + tmpData2 + "&lt;br&gt;&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="ls2Output"></p>
+			<button onclick="localStorage2()">Run</button>
+			<button onclick="clear2()">Clear</button>
+		</div>		
 		
-		
+		<h3>Local Storage API Example 3 - Removing Data</h3>
+		<div id="localStorage3">
+			<u>Code:</u>
+			<p class="code">
+			let output = "";<br>
+			output += "Clearing out localStorage&lt;br&gt;&lt;br&gt;";<br><br>
+			// Only Attempt if localStorage API is supported<br>
+			if (localStorageSupported()) {<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// Lets remove the localStorage and sessionStorage Keys that we use.<br>		
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "Removing localStorage Keys: &lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// lastVisit<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbsplastVisit&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('lastVisit');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// billingAddress<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbspbillingAddress&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('billingAddress');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// shippingAddress<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbspshippingAddress&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('SAstreet1');<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('SAcity');<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('SAstate');<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('SApostalCode');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// shoppingCart<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbspshoppingCart&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsplocalStorage.removeItem('shoppingCart');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;Removing sessionStorage Keys:&lt;br&gt;&lt;br&gt;";<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// tmpData<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbsptmpData&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspsessionStorage.removeItem('tmpData');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp// tmpData2<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&nbsp&nbsp&nbsp&nbsp&nbsptmpData2&lt;br&gt;";<br>
+			&nbsp&nbsp&nbsp&nbsp&nbspsessionStorage.removeItem('tmpData2');<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspoutput += "&lt;br&gt;Done!&lt;br&gt;";<br>
+			}<br>
+			</p>
+			<u>Output:</u>
+			<p class="output" id="ls3Output"></p>
+			<button onclick="localStorage3()">Run</button>
+			<button onclick="clear3()">Clear</button>
+		</div>
 		
 	</main>
 	

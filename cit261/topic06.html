@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic06.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -19,12 +20,23 @@
 		<h2>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h2>
 		
 		<h3>DOM Maniplation Append / Remove</h3>
-		<p class="output" id="appendRemoveOutput"></p>
-		<button onclick="elementAppend()">Add</button>
+		<p>Current Elements: <span id="elementAppendRemoveCount"></span></p>
+		<button onclick="elementAppend()">Append</button>
 		<button onclick="elementRemove()">Remove</button>
-		<div id="elementAppendRemove">
-		</div>
+		<button onclick="elementRemoveAll()">Remove All</button>
+		<br><br>
+		<div id="elementAppendRemove"></div>
+		<p class="output">Status: <span id="appendRemoveOutput"></span></p><br>
 		
+		
+		<h3>DOM Maniplation Insert Before</h3>
+		<button onclick="elementInsertBefore()">Insert</button>
+		<button onclick="elementClearInserted()">Clear Inserted</button>
+		<br><br>
+		<div id="elementInsertBefore">
+			<div class="box" style="background-color:silver">First</div><div class="box" style="background-color:silver">Last</div>
+		</div>
+		<p class="output">Status: <span id="insertBeforeOutput"></span></p><br>
 	</main>
 	
 	<footer includefile="footer.html"></footer>

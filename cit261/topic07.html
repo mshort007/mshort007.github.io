@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic07.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,8 +19,37 @@
 		<h1>Topic 7</h1>
 		<h2>Manipulating CSS Class Properties Using JavaScript</h2>
 		
-		
-		
+		<h3>Maniplate CSS Properties - Height / Width / Color / Border Radius</h3>
+		<div class="buttonRow">Height: 
+		<button onclick="setHeight(0)">Small</button>
+		<button onclick="setHeight(1)">Medium</button>
+		<button onclick="setHeight(2)">Large</button>
+		</div>
+		<div class="buttonRow">Width: 
+		<button onclick="setWidth(0)">Small</button>
+		<button onclick="setWidth(1)">Medium</button>
+		<button onclick="setWidth(2)">Large</button>
+		</div>
+		<div class="buttonRow">Color: 
+		<button onclick="color(0)">Red</button>
+		<button onclick="color(1)">Orange</button>
+		<button onclick="color(2)">Yellow</button>
+		<button onclick="color(3)">Green</button>
+		<button onclick="color(4)">Blue</button>
+		<button onclick="color(5)">Purple</button>
+		<button onclick="color(6)">Black</button>
+		</div>
+		<div class="buttonRow">Border Radius: 
+		<button onclick="setRadius(0)">0px</button>
+		<button onclick="setRadius(1)">10px</button>
+		<button onclick="setRadius(2)">20px</button>
+		<button onclick="setRadius(3)">30px</button>
+		<button onclick="setRadius(4)">40px</button>
+		</div>
+		<br>
+		<div id="manipulatedDiv"></div>
+		<p class="output">Info: <span id="manipulateOutput"></span></p><br>
+
 	</main>
 	
 	<footer includefile="footer.html"></footer>

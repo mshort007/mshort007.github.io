@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic10.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,7 +19,30 @@
 		<h1>Topic 10</h1>
 		<h2>HTML5 Tags - Video, Audio, and Canvas</h2>
 		
+		<h3>Video</h3>
+		<div id="html5video">
+			<p>Video files courtesy of <a href="http://techslides.com">TECHSLIDES</a></p>
+			<video controls> 
+				<source src="media/small.ogv" type="video/ogg"> 
+				<source src="media/small.mp4" type="video/mp4">
+				<source src="media/small.webm" type="video/webm"> 
+			</video>
+		</div>
+
+		<h3>Audio</h3>
+		<div id="html5audio">
+			<p>Audio files courtesy of <a href="http://techslides.com">TECHSLIDES</a></p>
+			<audio controls> 
+				<source src="media/sample.ogg" type="audio/ogg"> 
+				<source src="media/sample.mp3" type="video/mp3">
+				<source src="media/sample.wav" type="video/wav"> 
+			</audio>
+		</div>
 		
+		<h3>Canvas</h3>
+		<div id="html5canvas">
+			<canvas id="funCanvas" width="300px" height="200px"></canvas> 
+		</div>
 		
 	</main>
 	

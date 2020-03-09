@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic08.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,7 +19,13 @@
 		<h1>Topic 8</h1>
 		<h2>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
 		
+		<h3>JavaScript Triggered Animation</h3>
+		<button id="animationButton" onclick="toggleAnimation()">Start</button>
+		<div id="animationDiv" class="animation"></div>
 		
+		<h3>JavaScript Triggered Transition</h3>
+		<p>Click element to activate/deactivate transition</p>
+		<div id="transitionDiv" onclick="toggleTransition()" class="noTransition"></div>
 		
 	</main>
 	

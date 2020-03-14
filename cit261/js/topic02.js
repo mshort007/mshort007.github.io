@@ -69,11 +69,11 @@ class voter extends person {
 	}
 	
 	getAssemblyDistrict() {
-		return assemblyDistrict;
+		return this.assemblyDistrict;
 	}
 	
 	getSenateDistrict() {
-		return senateDistrict;
+		return this.senateDistrict;
 	}
 }
 

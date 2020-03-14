@@ -4,7 +4,7 @@ function include() {
     let allElements = document.getElementsByTagName('*');  // get all elements on the page
 
     for (let i = 0; i < allElements.length; i++) {   // process all the elements looking for the custom attribute 'includefile'
-        file = allElements[i].getAttribute("includefile");
+        file = allElements[i].getAttribute('includefile');
         if (file) { // if the attribute is found, process an AJAX XMLHttpRequest
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {

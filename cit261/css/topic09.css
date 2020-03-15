@@ -1,0 +1,44 @@
+#animationButton {
+	margin: 10px;
+}
+
+#animatedDateOutter {
+	width: auto;
+	height: 300px;
+}
+
+#animatedDate {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	padding: 25px;
+	text-align: center;
+	border-radius: 25px;
+	position: relative;
+	animation-name: dancingDate;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+}
+
+@keyframes dancingDate {
+  0%   {left:0; top:0px;}
+  25%  {left:300px; top:150px;}
+  50%  {left:300px; top:0px;}
+  75%  {left:0px; top:150px;}
+  100%  {left:0px; top:0px;}
+}
+
+#colorChange {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 20px;
+}
+
+#touchArea {
+	width: 400px;
+	height: 300px;
+	background-color: white;
+	color: purple;
+}

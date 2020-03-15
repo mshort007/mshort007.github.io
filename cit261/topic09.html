@@ -9,6 +9,7 @@
 	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
 	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
 	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+	<link href="css/topic09.css"   rel="stylesheet">
 </head>
 <body>
 	<header includefile="header.html"></header>
@@ -18,18 +19,20 @@
 		<h1>Topic 9</h1>
 		<h2>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h2>
 		
-		<h3>JavaScript Events - onload / Triggered Animation</h3>
-		<button id="animationButton" onclick="toggleAnimation()">Start</button>
-		<div id="animationDiv" class="animation"></div>
+		<h3>JavaScript Events - onload getDate() / onclick / onmouseenter</h3>
+		<button id="animationButton" onclick="toggleAnimation()">Toggle Animation</button>
+		<div id="animatedDateOutter">
+			<div id="animatedDate" onclick="toggleAnimation()" onmouseenter="toggleAnimation()" class="animation""></div>
+		</div>
 		
-		<h3>JavaScript Triggered Transition</h3>
-		<p>Click element to activate/deactivate transition</p>
-		<div id="transitionDiv" onclick="toggleTransition()" class="noTransition"></div>
-		<!-- onload, mouseenter mouseleave -->
+		<h3>JavaScript Events - onclick</h3> 
+		<div id="colorChange" onclick="switchColor()"></div>
+		<p>Click to Change Color</p>
 		
-		<!-- Area to get mouse events and read the X and Y , print it out. -->
-		<!-- ontouchstart ontouchend ontouchmove
-		
+		<h3>JavaScript Mobile Events - ontouchstart ontouchend ontouchmove</h3>
+		<div id="touchArea" ontouchstart="touchStart()" ontouchend="touchEnd()" ontouchmove="touchMove(event)">Touch In Here With a Touch Device!</div>
+		<p>Touch Status: <span id="touchStartEndStatus"></span></p>
+		<p>X Y Coordinates: <span id="xyCoordinates"></span></p>
 		
 	</main>
 	

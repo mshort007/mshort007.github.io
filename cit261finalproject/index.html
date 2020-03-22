@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael Short">
+	<meta name="description" content="Big Losers Web App">
+	<title>Big Losers</title>
+	<link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
+	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
+	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+</head>
+<body>
+	<header includefile="header.html"></header>
+	<nav includefile="nav.html"></nav>
+	
+	<main id="main">
+		<b><u>TOPICS</u></b>
+		<div id="nutritionInfoSearch">
+			<!-- Input Field Here -->
+			<button onclick="doItemSearch()">Search</button>
+		</div>
+	</main>
+	
+	<footer includefile="footer.html"></footer>
+</body>
+<script src="js/hamburger.js"></script>
+<script src="js/include.js"></script>
+<script src="js/activateNav.js"></script>
+<script src="js/nutritionAPI.js"></script>
+</html>

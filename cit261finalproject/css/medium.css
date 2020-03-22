@@ -1,0 +1,53 @@
+@media only screen and (min-width: 37.5em) {
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav ul.hide {
+        display: contents;
+    }
+
+    .navSep {
+        display: contents;
+    }
+
+    nav {
+        display: flex;
+        padding: 0 0 0 2%;
+    }
+
+    nav ul li {
+        display: inline-flex;
+        border: none;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a:link {
+        background-color: #afbcbb;
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        background-color: #afbcbb;
+        color: forestgreen;
+    }
+
+    nav ul li a:active {
+        background-color: #84aab7;
+        color: #afbcbb;
+    }
+
+    .active {
+        background-color: #afbcbb;
+        color: white;
+    }
+
+}

@@ -50,4 +50,19 @@
         color: white;
     }
 
+
+    #upcInput {
+        font-size: 24px;
+    }
+
+    #upcInput:focus {
+        font-size: 36px;
+    }
+
+    button {
+        padding: 5px 10px 5px 10px;
+        border-radius: 9px;
+        font-size: 18px;
+    }
+
 }

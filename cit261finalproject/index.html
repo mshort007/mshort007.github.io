@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Michael Short">
-	<meta name="description" content="Big Losers Web App">
-	<title>Big Losers</title>
-	<link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
-	<link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
-	<link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
-	<link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+    <meta charset="utf-8">
+    <meta name="author" content="Michael Short">
+    <meta name="description" content="Happiest Losers Web App">
+    <title>Happiest Losers</title>
+    <link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
+    <link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
+    <link href="css/large.css"     rel="stylesheet"> <!-- large/wide/desktop views -->
+    <link href="css/index.css"     rel="stylesheet"> <!-- index styles -->
 </head>
 <body>
-	<header includefile="header.html"></header>
-	<nav includefile="nav.html"></nav>
-	
-	<main id="main">
-		<b><u>UPC Nutritional Info Search</u></b>
-		<div id="nutritionInfoSearch">
-			<p>Label UPC: [TEXT FIELD] <!-- Input Field Here --></p>
-			<button onclick="doItemSearch()">Search</button>
-		</div>
-	</main>
-	
-	<footer includefile="footer.html"></footer>
+    <header includefile="header.html"></header>
+    <nav includefile="nav.html"></nav>
+
+    <main id="main">
+        <div id="weightTracker" class="mainContainer">
+            <div></div>
+        </div>
+
+        <div id="nutritionLookup" class="mainContainer">
+            <div id="nutritionInfoSearch" class="innerContainer">
+                <b><u>UPC Nutritional Info Search</u></b>
+                <p>
+                    <label for="upc">UPC Code:</label><br>
+                    <input name="upc" class="textInput" type="text" id="upcInput" size="12" maxlength="12">
+                </p>
+                <button onclick="clearItemSearch()">CLEAR</button>
+                <button onclick="doItemSearch()">SEARCH</button>
+                <p id="">
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer includefile="footer.html"></footer>
 </body>
 <script src="js/hamburger.js"></script>
 <script src="js/include.js"></script>

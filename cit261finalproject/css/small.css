@@ -123,7 +123,6 @@ footer {
     max-width: 95%;
     transition-property: font-size, background-color;
     transition-duration: 2s;
-    transition-delay: 0;
 }
 
 #upcInput:focus {
@@ -131,10 +130,37 @@ footer {
     background-color: slategrey;
 }
 
+#upcProductTitle {
+    color: yellow;
+    font-weight: bold;
+}
+
+#upcProductThumb {
+    max-width: 95%;
+    height: auto;
+    border-radius: 20px;
+}
+
 button {
     padding: 7px 15px 7px 15px;
     border-radius: 9px;
-    font-size: 22px;
+    font-size: 21px;
     font-family: monospace;
     font-weight: bold;
+    transition-property: padding, font-size;
+    transition-duration: 2s;
+}
+
+#upcProductTitle{
+    font-size: 24px;
+}
+
+#upcProductNutritionInfo {
+    font-size: 20px;
+}
+
+#nutriFactsTable table, tr, td {
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    padding: 0 20px 0 0;
 }

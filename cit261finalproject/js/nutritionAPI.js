@@ -26,10 +26,10 @@ function doItemSearch() {
                 // A response with id and message data from the API is an error
                 document.getElementById('nutritionalInfoOutput').innerHTML = "Result: " + myResponse.message;
             } else {
-                //
+                // Otherwise we should have good data, process it.
                 document.getElementById('nutritionalInfoOutput').innerHTML = "Processing...";
                 setLastQuery(searchQuery);
-                processResponse(myResponse);
+                document.getElementById('nutritionalInfoOutput').innerHTML = processResponse(myResponse);
             }
         }
     }
@@ -69,13 +69,82 @@ function containsData(a_data) {
         if (a_data.length) {
             result = true;
         }
+        if (typeof a_data == 'number') {
+            result = true;
+        }
     }
 
     return result;
 }
 
 function processResponse(a_response) {
-    return true;
+    let htmlOutput = "";
+
+    // Assemble Food Item Brand and Name
+    htmlOutput += "<p id=\"upcProductTitle\">";
+    let bBrand = containsData(a_response.foods[0].brand_name);
+    let bName = containsData(a_response.foods[0].food_name);
+    if (bBrand && bName) {
+        htmlOutput += a_response.foods[0].brand_name + " <br> " + a_response.foods[0].food_name;
+    } else if(bBrand) {
+        htmlOutput += a_response.foods[0].brand_name;
+    } else if(bName) {
+        htmlOutput += a_response.foods[0].food_name;
+    }
+    htmlOutput += "</p>";
+
+    // Show a thumbnail of the image if one exists
+    if (containsData(a_response.foods[0].photo.thumb)) {
+        htmlOutput += "<img src=\"" + a_response.foods[0].photo.thumb + "\" id=\"upcProductThumb\">";
+    }
+
+    // Create a Table to Display Nutritional Info
+    htmlOutput += "<p id=\"upcProductNutritionInfo\"><u>NUTRITION FACTS</u><br>";
+
+    if (containsData(a_response.foods[0].serving_qty) &&
+        containsData(a_response.foods[0].serving_unit) &&
+        containsData(a_response.foods[0].serving_weight_grams)) {
+        htmlOutput += "Serving Size: " + (a_response.foods[0].serving_qty).toFixed(2) + " " +
+            a_response.foods[0].serving_unit + " (" +
+            a_response.foods[0].serving_weight_grams + "g)<br>";
+    }
+
+    htmlOutput += "<table id=\"nutriFactsTable\">";
+
+    if (containsData(a_response.foods[0].nf_calories)) {
+        htmlOutput += "<tr><td>Calories:</td><td>" + a_response.foods[0].nf_calories + "</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_total_fat)) {
+        htmlOutput += "<tr><td>Total Fat:</td><td>" + a_response.foods[0].nf_total_fat + "g</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_saturated_fat)) {
+        htmlOutput += "<tr><td>Saturated Fat:</td><td>" + a_response.foods[0].nf_saturated_fat + "g</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_cholesterol)) {
+        htmlOutput += "<tr><td>Cholesterol:</td><td>" + a_response.foods[0].nf_cholesterol + "mg</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_sodium)) {
+        htmlOutput += "<tr><td>Sodium:</td><td>" + a_response.foods[0].nf_sodium + "mg</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_total_carbohydrates)) {
+        htmlOutput += "<tr><td>Total Carbohydrates:</td><td>" + a_response.foods[0].nf_total_carbohydrates + "g</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_dietary_fiber)) {
+        htmlOutput += "<tr><td>Dietary Fiber:</td><td>" + a_response.foods[0].nf_dietary_fiber + "g</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_sugars)) {
+        htmlOutput += "<tr><td>Sugars:</td><td>" + a_response.foods[0].nf_sugars + "g</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_protein)) {
+        htmlOutput += "<tr><td>Protein:</td><td>" + a_response.foods[0].nf_protein + "g</td></tr>";
+    }
+    if (containsData(a_response.foods[0].nf_potassium)) {
+        htmlOutput += "<tr><td>Potassium:</td><td>" + a_response.foods[0].nf_potassium + "mg</td></tr>";
+    }
+
+    htmlOutput += "</table></p>";
+
+    return htmlOutput;
 }
 
 function setLastQuery(a_query) {

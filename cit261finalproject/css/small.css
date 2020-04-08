@@ -1,103 +1,14 @@
-body {
-    background-color: darkblue;
-    font-family: 'Open Sans', serif;
-    color: white;
-    margin: 0;
-}
-
-h1 {
-    font-family: 'Francois One';
-}
-
-h2 {
-    font-family: 'Francois One';
-}
-
-header {
-    background-color: #12394f;
-    color: #e0e0e0;
-    text-align: center;
-    margin: 0;
-}
 
 header h1 {
-    font-family: 'Pacifico';
-    margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.1rem;
 }
 
-header a {
-    text-decoration: none;
-    color: #e0e0e0;
+header h2 {
+    font-size: 0.9rem;
 }
 
-.navSep {
-    display: none;
-}
-
-nav {
-    font-family: 'Pacifico';
-    background-color: #afbcbb;
-}
-
-nav button {
-    margin: 1% 0 1% 2%;
-    font-size: 2.5rem;
-    background-color: transparent;
-    border: none;
-}
-
-nav ul.hide {
-    display: none;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    list-style-type: none;
-    border: 1px solid #84aab7;
-}
-
-nav ul li a {
-    display: block;
-    color: #12394f;
-    font-size: 2rem;
-    padding: 4px 0;
-}
-
-nav ul li a:link {
-    background-color: #afbcbb;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #12394f;
-    color:  white;
-}
-
-nav ul li a:active {
-    background-color: white;
-    background-color: #84aab7;
-    color: #afbcbb;
-}
-
-.active {
-    background-color: #548bb0;
-}
-
-main {
-    padding: 2%;
-}
-
-footer {
-    background-color: #12394f;
-    color: #afbcbb;
-    padding: 2%;
-    text-align: center;
+header h3 {
+    font-size: 0.75rem;
 }
 
 #copyright {
@@ -105,6 +16,32 @@ footer {
     color: white;
 }
 
+body {
+    background-color: darkblue;
+    font-family: 'Open Sans', serif;
+    color: white;
+    margin: 0;
+}
+
+main {
+    padding: 2%;
+}
+
+header {
+    background-color: royalblue;
+    color: #afbcbb;
+    text-align: center;
+    padding: 2%;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+footer {
+    background-color: royalblue;
+    color: #afbcbb;
+    padding: 2%;
+    text-align: center;
+}
 
 .mainContainer {
     margin: 10px 0 10px 0;
@@ -163,4 +100,37 @@ button {
     font-size: 20px;
     border-bottom: 1px solid white;
     padding: 0 20px 0 0;
+}
+
+#headerImageLeft {
+    float: left;
+    width: 20%;
+    animation-name: flipper-left;
+    animation-duration: 5s;
+}
+
+#headerImageRight {
+    float: right;
+    width: 20%;
+    transform: scaleX(-1);
+    animation-name: flipper-right;
+    animation-duration: 5s;
+}
+
+@keyframes flipper-left {
+    0% {transform: perspective(600px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);}
+    40% {transform: perspective(600px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);}
+    80% {transform: perspective(600px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0); animation-timing-function: ease-in;}
+    100% {transform: perspective(600px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg); animation-timing-function: ease-in;}
+}
+
+@keyframes flipper-right {
+    0% {transform: scaleX(-1) perspective(600px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);}
+    40% {transform: scaleX(-1) perspective(600px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);}
+    80% {transform: scaleX(-1) perspective(600px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0); animation-timing-function: ease-in;}
+    100% {transform: scaleX(-1)  perspective(600px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg); animation-timing-function: ease-in;}
+}
+
+.clearfix {
+    overflow: auto;
 }

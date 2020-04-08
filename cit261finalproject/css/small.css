@@ -1,4 +1,20 @@
 
+body {
+    background-color: darkblue;
+    font-family: 'Open Sans', serif;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background-color: royalblue;
+    color: #afbcbb;
+    text-align: center;
+    padding: 2%;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
 header h1 {
     font-size: 1.1rem;
 }
@@ -11,29 +27,8 @@ header h3 {
     font-size: 0.75rem;
 }
 
-#copyright {
-    font-size: .6rem;
-    color: white;
-}
-
-body {
-    background-color: darkblue;
-    font-family: 'Open Sans', serif;
-    color: white;
-    margin: 0;
-}
-
 main {
     padding: 2%;
-}
-
-header {
-    background-color: royalblue;
-    color: #afbcbb;
-    text-align: center;
-    padding: 2%;
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
 }
 
 footer {
@@ -41,6 +36,11 @@ footer {
     color: #afbcbb;
     padding: 2%;
     text-align: center;
+}
+
+#copyright {
+    font-size: .6rem;
+    color: white;
 }
 
 .mainContainer {
@@ -55,14 +55,14 @@ footer {
     margin: 5px;
 }
 
-#upcInput {
+#upcInput, #weightInput {
     font-size: 28px;
     max-width: 95%;
     transition-property: font-size, background-color;
     transition-duration: 2s;
 }
 
-#upcInput:focus {
+#upcInput:focus, #weightInput:focus  {
     font-size: 40px;
     background-color: slategrey;
 }
@@ -70,6 +70,7 @@ footer {
 #upcProductTitle {
     color: yellow;
     font-weight: bold;
+    font-size: 24px;
 }
 
 #upcProductThumb {
@@ -86,10 +87,6 @@ button {
     font-weight: bold;
     transition-property: padding, font-size;
     transition-duration: 2s;
-}
-
-#upcProductTitle{
-    font-size: 24px;
 }
 
 #upcProductNutritionInfo {

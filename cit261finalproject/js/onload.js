@@ -1,0 +1,4 @@
+onload = function() {
+    weightTrackerOnload();
+    nutritionAPIOnload();
+}

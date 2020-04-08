@@ -6,7 +6,6 @@
     <meta name="description" content="Happiest Losers Web App">
     <title>Happiest Losers</title>
     <link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     <link href="css/small.css"     rel="stylesheet"> <!-- default styles - small/phone views -->
     <link href="css/medium.css"    rel="stylesheet"> <!-- medium/tablet views -->
@@ -19,7 +18,16 @@
 
     <main id="main">
         <div id="weightTracker" class="mainContainer">
-            <div></div>
+            <div id="weightTracker" class="innerContainer">
+                <b><u>Weight Tracker</u></b>
+                <p>
+                    <label for="weight">Current Weight:</label><br>
+                    <input name="weight" class="textInput" type="text" id="weightInput" size="6" maxlength="7">
+                </p>
+                <button onclick="clearLastRecord()">CLR LAST</button>
+                <button onclick="recordWeight()">RECORD</button>
+                <p id="weightTrackInfo"></p>
+            </div>
         </div>
 
         <div id="nutritionLookup" class="mainContainer">
@@ -31,9 +39,7 @@
                 </p>
                 <button onclick="clearItemSearch()">CLEAR</button>
                 <button onclick="doItemSearch()">SEARCH</button>
-                <p id="nutritionalInfoOutput">
-
-                </p>
+                <p id="nutritionalInfoOutput"></p>
             </div>
         </div>
     </main>
@@ -42,5 +48,9 @@
 </body>
 <script src="js/global.js"></script>
 <script src="js/include.js"></script>
+<script src="js/weightTracker.js"></script>
 <script src="js/nutritionAPI.js"></script>
+<script src="js/onload.js"></script>
+
+
 </html>

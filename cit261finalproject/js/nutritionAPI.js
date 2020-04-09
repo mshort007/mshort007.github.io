@@ -1,8 +1,8 @@
 // The use of localStorageSupported() will come from global.js
 // The use of containsData(a_data) will come from global.js
 
-//var itemSearchAPI = "//trackapi.nutritionix.com/v2/search/item";
-var itemSearchAPI = "https://trackapi.nutritionix.com/v2/search/item";
+var itemSearchAPI = "//trackapi.nutritionix.com/v2/search/item";
+//var itemSearchAPI = "https://trackapi.nutritionix.com/v2/search/item";
 var appId = "0179d55a";
 var appKey = "d674e8619657d62a79ee68f55cfc451d";
 
@@ -62,23 +62,6 @@ function isSearchLengthValid(a_size) {
 
     return result;
 }
-
-/*
-function containsData(a_data) {
-    let result = false;
-
-    if(a_data !== null && a_data !== undefined) {
-        if (a_data.length) {
-            result = true;
-        }
-        if (typeof a_data == 'number') {
-            result = true;
-        }
-    }
-
-    return result;
-}
-*/
 
 function processResponse(a_response) {
     let htmlOutput = "";

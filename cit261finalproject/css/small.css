@@ -93,22 +93,28 @@ button {
     font-size: 20px;
 }
 
-#nutriFactsTable table, tr, td {
+tr, td {
     font-size: 20px;
     border-bottom: 1px solid white;
     padding: 0 20px 0 0;
 }
 
+th {
+    text-align: left;
+}
+
 #headerImageLeft {
     float: left;
-    width: 20%;
+    max-width: 20%;
+    max-height: 160px;
     animation-name: flipper-left;
     animation-duration: 5s;
 }
 
 #headerImageRight {
     float: right;
-    width: 20%;
+    max-width: 20%;
+    max-height: 160px;
     transform: scaleX(-1);
     animation-name: flipper-right;
     animation-duration: 5s;

@@ -12,11 +12,11 @@
         font-size: 1.0rem;
     }
 
-    #upcInput {
+    #upcInput, #weightInput {
         font-size: 24px;
     }
 
-    #upcInput:focus {
+    #upcInput:focus, #weightInput:focus {
         font-size: 36px;
     }
 
